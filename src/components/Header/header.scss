@@ -1,0 +1,64 @@
+header[class="header"] {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #FFF;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
+}
+.content-top-bar {
+  background-color: #EADFFF;
+  .container-center {
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > div {
+        width: 50%;
+      }
+      .lista-redes {
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            a {
+             i{} 
+            }
+          }
+        }
+      }
+      .canais-contato {
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          li {
+            margin-left: 0;
+            border-left: 0;
+            a, span:has(i) {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              i {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .content-search {}
+  .logo {
+    a {
+      img {
+        position: relative;
+      }
+    }
+  }
+}
