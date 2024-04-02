@@ -20,13 +20,16 @@ const headerDesktop = {
   insertElementsOnHeader: function () {
     const containerCenter = createElement("div", "container-center");
     containerCenter.classList.add("content-header");
+
+    
     document.querySelector("header").appendChild(containerCenter);
 
     this.createTopBarContent();
+    this.createAlertBar();
     this.createSearchContent();
     this.createLogo();
     this.createContentMenuUser();
-    this.createAlertBar();
+    this.moveMainMenu();
   },
   createTopBarContent: () => {
     const contentTopBar = createElement("div", "content-top-bar");
@@ -42,7 +45,7 @@ const headerDesktop = {
     alertBar.children[0].innerHTML = `
       <p>SITE EXCLUSIVO PARA LOJISTAS. COMPRAS PARA USO PESSOAL <a href="/" target="_blank">CLIQUE AQUI</a>.</p>
     `;
-    document.querySelector("header").appendChild(alertBar);
+    document.querySelector(".content-top-bar").after(alertBar);
   },
   createSearchContent: () => {
     const contentSearch = createElement("div", "content-search");
@@ -70,8 +73,8 @@ const headerDesktop = {
       .appendChild(contentMenuUser);
 
     document.querySelector(".content-user > a.bem-vindo").innerHTML = `
-    <span class="icon-welcome"></span>
-    <p>Entrar / Cadastre-se</p>
+      <span class="icon-welcome"></span>
+      <p>Entrar / Cadastre-se</p>
     `;
 
     const contentButtonMiniCart = createElement('div', 'content-button-minicart');
@@ -81,12 +84,15 @@ const headerDesktop = {
       .appendChild(contentButtonMiniCart);
     
   },
+  moveMainMenu: () => {
+    document.querySelector('header > .content-header').after(document.querySelector('.menu.superior'))
+  },
   init: function () {
     this.createElementHeader();
   },
 };
 
 window.addEventListener("load", function () {
-  console.log("header");
+  console.log("header!");
   isDesktop ? headerDesktop.init() : null;
 });
