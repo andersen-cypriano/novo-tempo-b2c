@@ -3,14 +3,36 @@ header[class="header"] {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: #FFF;
-  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
+  background-color: #fff;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+// CONTENT SERACH RESULTS
+ul#ui-id-1 {
+  top: 127px;
+  left: 30px !important;
+  z-index: 100000;
+  width: 38% !important;
+  padding: 20px !important;
+  background-color: #eadfff;
+  li {
+    a {
+      padding: 10px;
+      background-color: #eadfff;
+      color: #402d5d;
+      font-size: 14px;
+      &:hover {
+        color: #fff;
+        background-color: #402d5d;
+      }
+    }
+  }
 }
 .content-top-bar {
   position: relative;
   width: 100vw;
-  background-color: #EADFFF;
-  padding: 7px 0;
+  background-color: #eadfff;
+  padding: 0;
   .container-center {
     > div {
       display: flex;
@@ -20,13 +42,40 @@ header[class="header"] {
         width: 50%;
       }
       .lista-redes {
+        display: flex;
+        align-items: center;
         ul {
           display: flex;
           align-items: center;
-          
+          gap: 9px;
           li {
             a {
-             i{} 
+              i.icon-facebook {
+                width: 15px;
+                height: 15px;
+                padding: 0;
+                margin: 0;
+                display: block;
+                background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-facebook.svg")
+                  center center no-repeat;
+                background-size: contain;
+                &::before {
+                  display: none;
+                }
+              }
+              i.icon-instagram {
+                width: 15px;
+                height: 15px;
+                padding: 0;
+                margin: 0;
+                display: block;
+                background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-instagram.svg")
+                  center center no-repeat;
+                background-size: contain;
+                &::before {
+                  display: none;
+                }
+              }
             }
           }
         }
@@ -43,16 +92,58 @@ header[class="header"] {
           margin: 0;
           float: none;
           &::after {
-            display: none!important;
+            display: none !important;
           }
           li {
             margin-left: 0;
             border-left: 0;
-            
-            a, span:has(i) {
+            i {
+              &::before {
+                display: none;
+              }
+            }
+            .icon-comment {
+              width: 15px;
+              height: 15px;
+              padding: 0;
+              margin: 0;
+              display: block;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/comment-icon.svg")
+                center center no-repeat;
+              background-size: contain;
+            }
+            .icon-phone {
+              width: 11px;
+              height: 15px;
+              padding: 0;
+              margin: 0;
+              display: block;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icone-tel.svg")
+                center center no-repeat;
+              background-size: contain;
+            }
+            .fa-whatsapp {
+              width: 12px;
+              height: 15px;
+              padding: 0;
+              margin: 0;
+              display: block;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-whatsapp.svg")
+                center center no-repeat;
+              background-size: contain;
+            }
+            span {
+              color: #000;
+              opacity: 1;
+            }
+            a,
+            span:has(i) {
               display: flex;
               align-items: center;
               gap: 10px;
+              color: #000;
+              opacity: 1;
+              text-decoration: none;
               i {
                 margin: 0;
               }
@@ -79,9 +170,9 @@ header[class="header"] {
         margin: 0;
         padding: 10px 20px;
         border-radius: 20px;
-        border: 1px solid #402D5D;
+        border: 1px solid #402d5d;
         &::placeholder {
-          color: rgba(0,0,0,.5)
+          color: rgba(0, 0, 0, 0.5);
         }
       }
       button.botao-busca {
@@ -91,10 +182,11 @@ header[class="header"] {
         transform: translateY(-50%);
         width: 23px;
         height: 23px;
-        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/search-button.svg") center center no-repeat;
+        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/search-button.svg")
+          center center no-repeat;
         background-size: contain;
-        box-shadow: none!important;
-        border: 0!important;
+        box-shadow: none !important;
+        border: 0 !important;
         overflow: visible;
         &::before {
           display: none;
@@ -128,24 +220,51 @@ header[class="header"] {
         display: flex;
         align-items: center;
         gap: 10px;
-        box-shadow: inset 0 0 0 rgba(0,0,0,0),0 0 0 rgba(0,0,0,0);
+        box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
         span.icon-welcome {
           width: 20px;
           height: 20px;
-          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/account.svg") center center no-repeat;
+          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/account.svg")
+            center center no-repeat;
           background-size: contain;
         }
         p {
-          color: #402D5D;
-          font-size:16px;
+          color: #402d5d;
+          font-size: 16px;
           margin: 0;
+        }
+        color: #402d5d;
+        span {
+          color: #402d5d;
         }
       }
       .menu-user-logged {
+        ul.dropdown-menu {
+          min-width: 100%;
+          left: 0;
+          background-color: #eadfff;
+          padding: 10px;
+          border-radius: 0;
+          li {
+            a {
+              background-color: #eadfff;
+              color: #402d5d;
+              font-size: 14px;
+              &:hover {
+                color: #fff;
+                background-color: #402d5d;
+              }
+            }
+          }
+        }
         a.dropdown-toggle {
           background: transparent;
           border: 0;
           font-size: 14px;
+          color: #402d5d;
+          span {
+            color: #402d5d;
+          }
         }
       }
     }
@@ -155,29 +274,30 @@ header[class="header"] {
         width: 20px;
         height: 20px;
         float: none;
-        background-color: transparent!important;
+        background-color: transparent !important;
         opacity: 1;
         border: 0;
         &::before {
           content: "";
           width: 20px;
           height: 20px;
-          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/shopping-cart.svg") center center no-repeat;
+          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/shopping-cart.svg")
+            center center no-repeat;
           background-size: contain;
           display: block;
         }
       }
       .carrinho.vazio {
         border-radius: 20px;
-        border: 1px solid #8146FA;
+        border: 1px solid #8146fa;
         padding: 0 25px;
         > a {
           display: flex;
           align-items: center;
-          
+
           .qtd-carrinho {
             font-size: 16px;
-            display: block!important;
+            display: block !important;
           }
           span.vazio-text {
             display: inline-block;
@@ -188,7 +308,7 @@ header[class="header"] {
             display: flex;
             align-items: center;
             gap: 10px;
-            line-height: 0!important;
+            line-height: 0 !important;
             &::before {
               content: "Itens";
               font-size: 16px;
@@ -196,18 +316,17 @@ header[class="header"] {
               display: block;
             }
           }
-
         }
       }
       div[class="carrinho"] {
         padding: 0 25px;
         border-radius: 20px;
-        border: 1px solid #8146FA;
+        border: 1px solid #8146fa;
         > a {
           display: flex;
           align-items: center;
-          background: transparent!important;
-          border: 0!important;
+          background: transparent !important;
+          border: 0 !important;
           i {
             line-height: 0;
             margin: 0 12px 0 0;
@@ -215,33 +334,33 @@ header[class="header"] {
           }
           .qtd-carrinho {
             font-size: 16px;
-            display: block!important;
+            display: block !important;
             + span {
-              font-size: 13px!important;
+              font-size: 13px !important;
               padding: 0;
             }
           }
         }
       }
     }
-  } 
+  }
 }
 
 // ALERT BAR
 .alert-bar {
-  background: #5772F9;
+  background: #5772f9;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 20px;
   p {
     text-align: center;
-    color: #FFF;
+    color: #fff;
     font-size: 12px;
     text-transform: uppercase;
     margin: 0;
     a {
-      color: #FFF;
+      color: #fff;
       text-decoration: underline;
     }
   }
@@ -249,8 +368,8 @@ header[class="header"] {
 
 .menu.superior {
   margin: 0;
-  background-color: #402D5D!important;
-  border-radius: 0!important;
+  background-color: #402d5d !important;
+  border-radius: 0 !important;
   ul.nivel-um {
     max-width: 1280px;
     margin: 0 auto;
@@ -260,50 +379,66 @@ header[class="header"] {
       display: none;
     }
     > li {
-      border: 0!important;
+      border: 0 !important;
       margin: 0 !important;
+      padding: 0 10px;
       &:hover {
-        background-color: #eadfff!important;
+        background-color: #eadfff !important;
         a {
           strong.titulo {
-            color: #402D5D;
+            color: #402d5d;
           }
         }
       }
       a {
         strong.titulo {
-          color: #FFF;
+          color: #fff;
+        }
+      }
+    }
+    > li.com-filho {
+      i {
+        width: 13px;
+        height: 13px;
+        background: transparent
+          url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-dropdown.png")
+          center center no-repeat;
+
+        &:before {
+          display: none;
         }
       }
     }
     li.com-filho {
       i {
-        background-color: transparent!important;
+        background-color: transparent !important;
       }
       ul {
         padding: 10px 20px 0px 20px;
-        background-color: #eadfff!important;
+        background-color: #eadfff !important;
         &::-webkit-scrollbar {
           width: 5px;
         }
         &::-webkit-scrollbar-track {
-          background: transparent; 
+          background: transparent;
         }
         &::-webkit-scrollbar-thumb {
-          background: #402D5D; 
+          background: #402d5d;
         }
         &::-webkit-scrollbar-thumb:hover {
-          background: transparent; 
+          background: transparent;
         }
         li {
-          background: #402D5D;
+          background: #402d5d;
           margin-bottom: 10px;
+          i {
+            transform: rotate(-90deg);
+          }
           a {
-            color: #FFF;
+            color: #fff;
           }
         }
       }
-      
     }
   }
 }
