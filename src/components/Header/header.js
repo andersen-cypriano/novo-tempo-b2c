@@ -21,7 +21,6 @@ const headerDesktop = {
     const containerCenter = createElement("div", "container-center");
     containerCenter.classList.add("content-header");
 
-    
     document.querySelector("header").appendChild(containerCenter);
 
     this.createTopBarContent();
@@ -55,7 +54,9 @@ const headerDesktop = {
   },
   createLogo: () => {
     const logo = createElement("div", "logo");
-    logo.appendChild(document.querySelector("h1.logo a"));
+    const logoCover = document.querySelector("h1.logo a");
+
+    logoCover ? logo.appendChild(document.querySelector("h1.logo a")) :  logo.appendChild(document.querySelector("h2.logo a"));
     document.querySelector("header > .content-header").appendChild(logo);
   },
   createContentMenuUser: () => {
@@ -77,15 +78,21 @@ const headerDesktop = {
       <p>Entrar / Cadastre-se</p>
     `;
 
-    const contentButtonMiniCart = createElement('div', 'content-button-minicart');
-    contentButtonMiniCart.appendChild(document.querySelector('.inferior .carrinho'));
+    const contentButtonMiniCart = createElement(
+      "div",
+      "content-button-minicart"
+    );
+    contentButtonMiniCart.appendChild(
+      document.querySelector(".inferior .carrinho")
+    );
     document
       .querySelector("header .content-header .content-menu-user")
       .appendChild(contentButtonMiniCart);
-    
   },
   moveMainMenu: () => {
-    document.querySelector('header > .content-header').after(document.querySelector('.menu.superior'))
+    document
+      .querySelector("header > .content-header")
+      .after(document.querySelector(".menu.superior"));
   },
   init: function () {
     this.createElementHeader();
