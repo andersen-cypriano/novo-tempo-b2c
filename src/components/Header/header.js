@@ -1,4 +1,4 @@
-const isDesktop = window.matchMedia("(min-width: 768px)");
+const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
 function createElement(elemntHTML, className) {
   const elHTML = document.createElement(`${elemntHTML}`);
@@ -37,6 +37,14 @@ const headerDesktop = {
       document.querySelector(".row-fluid:has(.canais-contato)")
     );
     document.querySelector("header").prepend(contentTopBar);
+
+    // hidden labels
+    document
+      .querySelectorAll(".canais-contato ul li > span i")
+      .forEach((element) => {
+        const text = element.nextSibling.textContent.split(":")[1];
+        element.nextSibling.textContent = text;
+      });
   },
   createAlertBar: () => {
     const alertBar = createElement("div", "alert-bar");
@@ -56,7 +64,9 @@ const headerDesktop = {
     const logo = createElement("div", "logo");
     const logoCover = document.querySelector("h1.logo a");
 
-    logoCover ? logo.appendChild(document.querySelector("h1.logo a")) :  logo.appendChild(document.querySelector("h2.logo a"));
+    logoCover
+      ? logo.appendChild(document.querySelector("h1.logo a"))
+      : logo.appendChild(document.querySelector("h2.logo a"));
     document.querySelector("header > .content-header").appendChild(logo);
   },
   createContentMenuUser: () => {
@@ -96,10 +106,35 @@ const headerDesktop = {
   },
   init: function () {
     this.createElementHeader();
+    !isDesktop ? headerMObile.init() : null;
+  },
+};
+
+const headerMObile = {
+  createButtonMainMenu: function () {
+    const buttonMainMenu = createElement("div", "content-menu-mobile");
+    buttonMainMenu.appendChild(createElement("div", "btn-menu-mobile"))
+    buttonMainMenu.addEventListener('click', e => {
+      e.target.classList.toggle("btn-menu-mobile-close");
+      e.target.nextElementSibling.classList.toggle("open-menu");
+    })
+    document.querySelector(".content-header").prepend(buttonMainMenu);
+
+    this. moveMainMenu();
+  },
+  moveMainMenu: () => {
+    const contentMenu = document.querySelector('.content-menu-mobile');
+    const mainMenu = document.querySelector('.menu.superior');
+
+    contentMenu.appendChild(mainMenu);
+
+  },
+  init: function () {
+    isDesktop ? null : this.createButtonMainMenu();
+    console.log('header M.')
   },
 };
 
 window.addEventListener("load", function () {
-  console.log("header!");
-  isDesktop ? headerDesktop.init() : null;
+  headerDesktop.init();
 });
