@@ -114,24 +114,34 @@ const headerMObile = {
   createButtonMainMenu: function () {
     const buttonMainMenu = createElement("div", "content-menu-mobile");
     buttonMainMenu.appendChild(createElement("div", "btn-menu-mobile"))
-    buttonMainMenu.addEventListener('click', e => {
+    
+    document.querySelector(".content-header").prepend(buttonMainMenu);
+    document.querySelector('.content-menu-mobile .btn-menu-mobile').addEventListener('click', e =>{
       e.target.classList.toggle("btn-menu-mobile-close");
       e.target.nextElementSibling.classList.toggle("open-menu");
     })
-    document.querySelector(".content-header").prepend(buttonMainMenu);
 
     this. moveMainMenu();
   },
-  moveMainMenu: () => {
+  moveMainMenu: function () {
     const contentMenu = document.querySelector('.content-menu-mobile');
     const mainMenu = document.querySelector('.menu.superior');
 
     contentMenu.appendChild(mainMenu);
-
+    this.createSubMenu();
+  },
+  createSubMenu: function () {
+    document.querySelectorAll('ul[class^="nivel-"] > .com-filho > a').forEach(element => {
+      element.addEventListener('click', e => {
+          e.preventDefault();
+          element.nextElementSibling.classList.toggle('show-sub-menu');
+      })
+    })
+    
   },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header M.')
+    console.log('header init')
   },
 };
 

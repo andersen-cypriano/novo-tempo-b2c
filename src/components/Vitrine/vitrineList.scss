@@ -1,0 +1,217 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+#listagemProdutos {
+  > div[class^="titulo-"] {
+    background: transparent!important;
+    padding-left: 0!important;
+    border: 0;
+    padding: 0;
+    strong {
+      font-family: $font-2;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 800;
+      color: #000;
+    }
+  }
+  > ul {
+    li.listagem-linha {
+      > ul {
+        display: flex;
+        justify-content: space-between;
+        &::after {
+          display: none!important;
+        }
+        > li {
+          border: 0!important;
+          margin: 0;
+          .listagem-item {
+            .imagem-produto {
+              border-radius: 17px;
+              overflow: hidden;
+              margin-bottom: 15px;
+            }
+            .info-produto {
+              padding: 0;
+              a.nome-produto {
+                font-size:16px;
+                color: #000;
+              }
+              .preco-produto {}
+            }
+            .acoes-produto {
+              position: relative;
+              top: auto;
+              bottom: auto;
+              opacity: 1;
+              padding: 0;
+              border: 0;
+              a.botao-comprar {
+                max-width: 236px;
+                margin: 0 auto;
+                border-radius: 17px;
+                border: 1px solid #402D5D;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: $font-2!important;
+                text-align: center;
+                color: #444444;
+                height: 30px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent!important;
+                &:hover {
+                  background: #402D5D!important;
+                  color: #fff;
+                }
+                i {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:768px) {
+  #listagemProdutos {
+    div[class*="vitrine-"] {
+      + ul {
+        position: relative;
+        button[class*="slick-arrow"] {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 46%;
+          transform: translateY(-50%);
+          z-index: 10;
+          font-size: 0;
+          border-radius: 50%;
+          &::before {
+            display: none;
+          }
+        }
+        button.slick-prev {
+          background: #8E8E8E url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-left.png") center center no-repeat;
+          background-size: 54%;
+          left: 0;
+        }
+        button.slick-next {
+          background: #8E8E8E url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-right.png") center center no-repeat;
+          background-size: 54%;
+          right: 0;
+        }
+        .listagem-item {
+          width: auto;
+          a {}
+          .imagem-produto {
+            border-radius: 17px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            img {
+              position: relative;
+            }
+          }
+          .info-produto {
+            padding: 0;
+            a.nome-produto {
+              font-size:12px;
+              color: #000;
+            }
+            .preco-produto {
+              margin-bottom: 15px;
+              strong.preco-promocional {
+                font-size:12px;
+                color: #000;
+              }
+            }
+          }
+          .acoes-produto-responsiva {
+            display: block!important;
+            position: relative!important;
+            a.tag-comprar {
+              max-width: 236px;
+              margin: 0 auto;
+              border-radius: 17px;
+              border: 1px solid #402D5D;
+              
+              
+              
+              height: 30px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: transparent!important;
+              span {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: $font-2!important;
+                text-align: center;
+                color: #444444!important;
+              }
+              &:hover {
+                background: transparent!important;
+                color: #444444!important;
+                
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+          .acoes-produto {
+            position: relative;
+            top: auto;
+            bottom: auto;
+            opacity: 1;
+            padding: 0;
+            border: 0;
+            a.botao-comprar {
+              max-width: 236px;
+              margin: 0 auto;
+              border-radius: 17px;
+              border: 1px solid #402D5D;
+              font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;
+              font-family: $font-2!important;
+              text-align: center;
+              color: #444444;
+              height: 30px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: transparent!important;
+              &:hover {
+                background: #402D5D!important;
+                color: #fff;
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    > ul {
+      li.listagem-linha {
+       > ul {
+        overflow: hidden;
+        flex-direction: column;
+       } 
+      }
+    }
+  }
+}
