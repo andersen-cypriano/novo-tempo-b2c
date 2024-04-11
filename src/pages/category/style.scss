@@ -1,0 +1,401 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+.pagina-categoria {
+  #corpo {
+    .conteiner {
+      .breadcrumbs {
+        border: 0;
+        ul {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          li {
+            position: relative;
+            &:first-of-type {
+              &:before {
+                display: none !important;
+              }
+            }
+            &:before {
+              position: absolute;
+              left: -15px;
+              top: 50%;
+              transform: translateY(-50%);
+              content: "";
+              width: 15px;
+              height: 15px;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icone-arrow-right.svg")
+                center center no-repeat;
+              background-size: 70%;
+            }
+            a,
+            strong {
+              font-family: $font-2;
+              color: #1e103b;
+              font-weight: 800;
+              font-size: 13px;
+              text-transform: uppercase;
+              text-decoration: none;
+              padding: 0;
+              i {
+                display: none;
+              }
+            }
+            border: 0;
+          }
+        }
+      }
+      .secao-principal {
+        position: relative;
+        > .coluna.show-filter {
+          display: block !important;
+        }
+        > .coluna {
+          display: none;
+          border-radius: 0px 0px 21px 0px;
+          box-shadow: 0 0 5px rgba(0,0,0,0.3);
+          > div {
+            float: none;
+            clear: both;
+            margin: 0;
+          }
+          > .filtro-coluna {
+            padding: 10px;
+            background: #eadfff;
+            border: 0;
+            .filtro {
+              border: 0;
+              box-shadow: none;
+              padding: 0;
+              outline: none !important;
+              h4.titulo {
+                font-family: $font-2!important;
+                padding: 10px 0;
+                font-size: 13px;
+                color: #402d5d;
+                text-transform: uppercase;
+                margin: 0;
+                font-weight: 700;
+              }
+            }
+          }
+          .content-close {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            div {
+              font-size: 20px;
+              color: #402D5D;
+              font-family: $font-2;
+              cursor: pointer;
+              opacity: 1 !important;
+            }
+          }
+          // CONTENT FILTER
+          &:nth-of-type(1) {
+            position: absolute;
+            top: 38px;
+            left: 0;
+            background: #fff;
+            z-index: 60;
+
+            
+          }
+        }
+        > .conteudo {
+          width: 100%;
+          margin: 0;
+          .ordenar-listagem {
+            > div {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              > div:has(.pagination) {
+                display: none;
+              }
+              
+              > div {
+                width: 50%;
+                margin: 0;
+              }
+              .content-button-filter {
+                .filter-button {
+                  background: #eadfff;
+                  width: 200px;
+                  height: 38px;
+                  padding: 10px;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  span {
+                    width: 100%;
+                    font-size: 14px;
+                    font-family: "Cinzel";
+                    font-weight: 700;
+                    color: #402d5d;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &::after {
+                      content: "";
+                      width: 15px;
+                      height: 15px;
+                      background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg")
+                        center center no-repeat;
+                    }
+                  }
+                }
+              }
+              > div:has(div > .input-append) {
+                display: flex;
+                justify-content: flex-end;
+                > div {
+                  .input-append {
+                    width: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 38px;
+                    padding: 10px;
+                    background: #eadfff;
+                    label[for="botaoOrdenar"] {
+                      padding: 0;
+                      border: 0;
+                      border-radius: 0;
+                      font-size: 14px;
+                      font-family: "Cinzel";
+                      font-weight: 700;
+                      color: #402d5d;
+                      background: transparent;
+                    }
+                    .btn-group {
+                      button {
+                        padding: 0;
+                        border: 0;
+                        border-radius: 0;
+                        background: transparent;
+                        border: 0;
+                        display: flex;
+                        align-items: center;
+                        i {
+                          content: "";
+                          width: 15px;
+                          height: 15px;
+                          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg")
+                            center center no-repeat;
+                          &:before {
+                            display: none;
+                          }
+                        }
+                      }
+                      ul.dropdown-menu {
+                        margin-top: 21px;
+                        width: 200px;
+                        left: auto;
+                        right: -10px;
+                        z-index: 60;
+                        background: #eadfff;
+                        border-radius: 0;
+                        li {
+                          a {
+                            &:hover {
+                              background: #402d5d;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          div[class^="ordenar-listagem rodape"] {
+            > div:has(.pagination) {
+              display: block!important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// CONTENT FILTER
+.coluna {
+  div.menu {
+    > ul.nivel-um {
+      > li {
+        width: 100%;
+        border: 0!important;
+        background: transparent!important;
+        > a {
+          background: #eadfff;
+          padding: 10px;
+          box-shadow: 0 0 0 rgba(0,0,0,0)!important;
+          strong {
+            font-family: $font-2;
+            font-size: 15px;
+            color: #402d5d;
+            text-transform: uppercase;
+            margin: 0;
+            font-weight: 700;
+          }
+          i {
+            margin: 0;
+            width: 15px;
+            height: 15px;
+            background: transparent url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg") center center no-repeat!important;
+            background-size: contain;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+      li.com-filho {
+        ul[class^='nivel-'] {
+          position: relative;
+          left: 0;
+          border-radius: 0 0 21px 0;
+          margin-bottom: 20px;
+          li {
+            background-color: transparent;
+            &:hover {
+              background-color: transparent;
+            }
+            a {
+              color: #000;
+              font-weight: 500;
+            }
+            i {
+              top: auto!important;
+              margin: 0;
+              width: 15px;
+              height: 15px;
+              background: transparent url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg") center center no-repeat!important;
+              background-size: contain;
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media(max-width:768px) {
+  .conteiner-principal {
+    padding-top: 240px;
+  }
+  .conteudo {
+    .ordenar-listagem {
+      > .row-fluid {
+        justify-content: center!important;
+        gap: 10px;
+        > div {
+          width: 50%;
+        }
+        .content-button-filter {
+          
+          .filter-button {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+        > div[class="span6 clearfix"] {
+          gap: 10px;
+          justify-content: center!important;
+
+          > div {
+            width: 100%;
+            .input-append {
+              max-width: 100%!important;
+              width: 100%!important;
+              padding: 5px;
+              .btn-group {
+                margin-left: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .titulo {
+      font-family: $font-2;
+      color: #402d5d;
+      font-weight: 500;
+    }
+  }
+
+  #listagemProdutos {
+    > ul {
+      > li.listagem-linha {
+        > ul {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row!important;
+          flex-wrap: wrap;
+          gap: 2%;
+          > li {
+            width: 48%!important;
+            .listagem-item {
+              .imagem-produto {
+                height: auto;
+                img {
+                  position: relative;
+                  &:nth-of-type(2) {
+                    display: none;
+                  }
+                }
+              }
+              .info-produto {
+                a {
+                  font-size: 12px!important;
+                }
+                .preco-produto {
+                  strong {
+                    font-size: 16px;
+                    color: #000000;
+                  }
+                }
+              }
+              .acoes-produto-responsiva {
+                position: relative!important;
+                a {
+                  border: 1px solid #402D5D;
+                  border-radius: 21px;
+                  background: transparent!important;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  padding: 5px!important;
+                  span.titulo {
+                    text-transform: uppercase;
+                    color: #444444;
+                    font-size: 12px!important;
+                    margin: 0;
+                    font-weight: 700;
+                    line-height: 14px!important;
+                  }
+                  i {
+                    display: none!important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
