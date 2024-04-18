@@ -67,6 +67,7 @@ $font-2: "Cinzel", serif;
 }
 
 .info-principal-produto {
+  margin-bottom: 50px;
   h1.nome-produto {
     font-size: 32px;
     color: #000;
@@ -85,6 +86,7 @@ $font-2: "Cinzel", serif;
       }
     }
   }
+
 }
 
 .produto-compartilhar {
@@ -256,7 +258,7 @@ $font-2: "Cinzel", serif;
     li.listagem-linha {
       > ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         &::after {
           display: none !important;
         }
@@ -278,6 +280,14 @@ $font-2: "Cinzel", serif;
               }
               .preco-produto {
               }
+              .preco-a-partir {
+                font-size: 16px;
+                color: #000;
+                strong {
+                  font-size: 16px;
+                  color: #000;
+                }
+              }
             }
             .acoes-produto {
               position: relative;
@@ -287,7 +297,7 @@ $font-2: "Cinzel", serif;
               padding: 0;
               border: 0;
               a.botao-comprar {
-                max-width: 236px;
+                max-width: 100%;
                 margin: 0 auto;
                 border-radius: 17px;
                 border: 1px solid #402d5d;
@@ -332,6 +342,7 @@ $font-2: "Cinzel", serif;
   }
   .info-principal-produto {
     border: 0 !important;
+    margin-bottom: 50px!important;
     h1.nome-produto {
       font-size: 20px;
       line-height: 23px;

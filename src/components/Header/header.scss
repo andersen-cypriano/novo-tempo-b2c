@@ -336,8 +336,43 @@ ul#ui-id-1 {
             font-size: 16px;
             display: block !important;
             + span {
-              font-size: 13px !important;
+              font-size: 12px !important;
               padding: 0;
+              span {
+                font-size: 12px !important;
+              }
+            }
+          }
+        }
+        .carrinho-interno {
+          > ul {
+            > li {
+              padding: 0
+            }
+          }
+          .carrinho-rodape {
+            .carrinho-info {
+              width: 100%;
+              float: none;
+              clear: both;
+              i {
+                font-size: 14px;
+                font-weight: 600;
+                font-style: normal;
+                margin-bottom: 10px;
+                text-align: right;
+              }
+              .carrino-total {
+                font-size: 15px;
+                font-weight: 800;
+                color: #402d5d;
+                text-align: right;
+                strong {
+                  font-size: 15px;
+                  font-weight: 800;
+                  color: #402d5d;
+                }
+              }
             }
           }
         }
