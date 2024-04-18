@@ -143,7 +143,13 @@ $font-2: "Cinzel", serif;
     }
   }
 }
-
+.acoes-produto.preco-restrito {
+  .comprar {
+    > a {
+      font-size: 13px!important;
+    }
+  }
+}
 .acoes-produto {
   > div:has(.preco-produto) {
     .preco-produto {

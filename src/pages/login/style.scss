@@ -1,0 +1,167 @@
+$purple: #402d5d;
+
+.pagina-login {
+  .cadastro {
+    .cabecalho-interno {
+      > div {
+        .titulo {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 14px;
+          color: $purple;
+          small {
+            font-size: 14px;
+            color: #444444;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            &::before {
+              content: "";
+              width: 15px;
+              height: 15px;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icone-arrow-right.svg")
+                center center no-repeat;
+              background-size: 15px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cadastro-logar {
+    width: 80%;
+    margin: 0 auto;
+    > div {
+      .caixa-sombreada {
+        border: 0;
+        box-shadow: none;
+      }
+      form {
+        fieldset {
+          legend.titulo {
+            border: 0;
+            font-size: 16px;
+            color: #444444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          label {
+            font-size: 14px!important;
+            width: auto!important;
+          }
+        }
+      }
+      // cadastrado
+      &:nth-of-type(1) {
+        form {
+          .icon-user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+              content: '';
+              width: 25px;
+              height: 25px;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/account.svg") center center no-repeat;
+              background-size: 25px;
+            }
+          }
+
+          .control-group  {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            .control-label {}
+            .controls {
+              margin-left: 0;
+              input {
+                width: 100%;
+                height: 30px;
+                border: 0;
+                border-radius: 0;
+                outline: none;
+                background: #EADFFF;
+                box-shadow: none;
+              }
+              button {
+                background: #402D5D;
+                margin: 20px 0 0 0;
+                display: block;
+                border: 0;
+                border-radius: 0;
+                font-weight: 600;
+                color: #FFF;
+              }
+            }
+          }
+          a.recuperar-senha {
+            margin: -40px 0 0 0;
+            float: right !important;
+          }
+        }
+      }
+      // sem cadastrado
+      &:nth-of-type(2) {
+        form {
+          .icon-edit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+              content: '';
+              width: 25px;
+              height: 25px;
+              background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-paper.svg") center center no-repeat;
+              background-size: 25px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 30px;
+            border: 0;
+            border-radius: 0;
+            outline: none;
+            background: #EADFFF;
+            box-shadow: none;
+          }
+          button {
+            background: #402D5D;
+            margin: 20px 0 0 0;
+            display: block;
+            border: 0;
+            border-radius: 0;
+            font-weight: 600;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .pagina-login {
+    .cadastro {
+      .cabecalho-interno {
+        .titulo {
+          flex-direction: column;
+          small {
+            &::before {
+              display: none!important;
+            }
+          }
+        }
+      }
+      .cadastro-logar {
+        width: 100%;
+        .recuperar-senha {
+          margin: 0!important
+        }
+      }
+    }
+  }
+}
