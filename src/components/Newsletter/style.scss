@@ -1,0 +1,71 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+#barraNewsletter {
+  background: #d6c1ff !important;
+  .newsletter {
+    position: relative;
+    background: transparent !important;
+    height: 117px;
+  }
+  .interno {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important;
+    .titulo {
+      width: 340px;
+      height: 86px;
+      display: block !important;
+      font-family: $font-2;
+      font-size: 52px;
+      font-weight: 700;
+      color: #000;
+      margin: 0;
+      i[class^="icon-"] {
+        display: none !important;
+      }
+      p {
+        font-family: $font-1 !important;
+        color: #000;
+        margin-top: -18px;
+        font-weight: 500 !important;
+      }
+    }
+  }
+  .interno-conteudo {
+    input[name="email"] {
+      width: 348px;
+      height: 40px;
+      border: 1px solid #6134ba;
+      border-radius: 40px;
+      padding-left: 30px;
+    }
+    button.newsletter-assinar {
+      border-radius: 40px;
+      height: 40px;
+      width: 144px;
+      border: 0;
+      background: #6134ba;
+    }
+  }
+}
+.hands-newsletter {
+  position: absolute;
+  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/hands.png")
+    no-repeat;
+  width: 146px;
+  height: 131px;
+  top: -12px;
+  left: 0;
+}
+.flowers-newsletter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 104px;
+  height: 117px;
+  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/flowers.png")
+    no-repeat;
+}
