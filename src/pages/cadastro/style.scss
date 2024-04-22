@@ -1,0 +1,139 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+#formCadastroCompleto {
+  max-width: 1113px;
+
+  margin: 50px auto 0 auto;
+  .cabecalho-interno {
+    margin: 0;
+    background: #EADFFF;
+    padding: 10px 20px;
+    .titulo {
+      font-size: 16px;
+      margin: 0;
+      color: #402D5D;
+      font-family: $font-1;
+      small {
+        font-family: $font-1;
+        font-size: 16px;
+        color: #402D5D;
+        font-weight: 400;
+      }
+    }
+  }
+  form.formulario-cadastro-cliente {
+    .dados-acesso {
+      .caixa-sombreada {
+        border: 0;
+        box-shadow: none;
+        background: #EADFFF!important;
+      }
+      fieldset {
+        padding: 0;
+        legend {
+          border: 0;
+          font-size: 14px;
+          color: #402D5D;
+          font-family: $font-1;
+        }
+        .control-group {
+          label {
+            font-size: 14px;
+            color: #402D5D;
+            font-family: $font-1;
+            font-weight: 400!important;
+            margin-bottom: 16px;
+          }
+          input {
+            max-width: 359px;
+            border: 1px solid #402D5D!important;
+            border-radius: 0!important;
+            background: transparent!important;
+            font-family: $font-1;
+            height: 34px;
+            outline: none;
+            border: 0;
+          }
+        }
+      }
+    }
+    .tipo-cadastro {
+      .caixa-sombreada {
+        fieldset {
+          padding: 0;
+          legend {
+            border: 0;
+            font-size: 14px;
+            color: #402D5D;
+            font-family: $font-1;
+          }
+          ul#id_tipo {
+            li {
+              &:first-of-type {
+                margin: 0;
+              }
+              label {
+                input[type="radio"] {
+                  accent-color: #402D5D;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .dados-pessoais {
+      .caixa-sombreada {
+        border: 0;
+        fieldset {
+          legend.titulo {
+            font-size: 16px;
+            margin: 0;
+            color: #402D5D;
+            font-family: $font-1;
+            small {
+              font-family: $font-1;
+              font-size: 16px;
+              color: #402D5D;
+              font-weight: 400;
+            }
+          }
+          .control-group {
+            label {
+              font-family: $font-1;
+              font-size: 14px;
+              color: #000000;
+              font-weight: 400!important;
+              text-align: left;
+            }
+            input, select {
+              margin-left: 0;
+              width: 290px;
+              height:34px;
+              border-radius: 0;
+              border: 1px solid #402D5D;
+            }
+
+          }
+        }
+      }
+    }
+    .acao-editar {
+      a {
+        background: #D6C1FF;
+        box-shadow: 0px 3px 6px #00000029;
+        color: #000;
+        border: 0;
+        font-family: $font-1;
+      }
+      button {
+        background: #402D5D;
+        box-shadow: 0px 3px 6px #00000029;
+        color: #FFF;
+        border: 0;
+        font-family: $font-1;
+      }
+    }
+  }
+}
