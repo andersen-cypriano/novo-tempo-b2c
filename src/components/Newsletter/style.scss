@@ -2,11 +2,17 @@ $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
 
 #barraNewsletter {
+  position: relative;
   background: #d6c1ff !important;
+  z-index: 10;
+  height: 120px;
+  .conteiner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
   .newsletter {
     position: relative;
     background: transparent !important;
-    height: 117px;
   }
   .interno {
     position: relative;
@@ -14,6 +20,7 @@ $font-2: "Cinzel", serif;
     justify-content: center;
     align-items: center;
     background-color: transparent !important;
+    padding: 0;
     .titulo {
       width: 340px;
       height: 86px;

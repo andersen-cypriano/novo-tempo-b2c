@@ -8,6 +8,48 @@
 
 #blank-home-position1 {
   + .cheio {
-    
+  }
+}
+
+.conteiner-principal,
+.conteiner {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#corpo {
+  .conteiner {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    #listagemProdutos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    ul[data-produtos-linha] {
+      max-width: 1280px;
+      margin-bottom: 50px;
+      .listagem-item {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// BANNER RODAPÉ
+.tarja {
+  width: 100%;
+  margin: 0;
+  float: none !important;
+  clear: both !important;
+  a {
+    img {
+      width: 100%;
+    }
   }
 }
