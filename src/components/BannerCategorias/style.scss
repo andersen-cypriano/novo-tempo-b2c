@@ -3,7 +3,7 @@ $font-2: "Cinzel", serif;
 
 .vitrine-categorias {
   width: 100%;
-  background: #EADFFF;
+  background: #eadfff;
   padding: 40px;
   overflow: hidden;
   .title-section {
@@ -20,57 +20,60 @@ $font-2: "Cinzel", serif;
     display: flex;
     gap: 30px;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
     &::after {
       position: absolute;
       right: -60px;
       bottom: -70px;
-      content: '';
+      content: "";
       width: 323px;
       height: 371px;
-      background:  url("https://cdn.awsli.com.br/2454/2454272/arquivos/bg-vitrine.svg") center center no-repeat;
+      background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/bg-vitrine.svg")
+        center center no-repeat;
       display: block;
       z-index: 1;
     }
     div {
+      position: relative;
+      z-index: 3;
       a {
         border-radius: 47% 47% 0 0;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      text-decoration: none!important;
-      z-index: 2;
-      img {
-        width: 100%;
-        margin-bottom: 25px;
-      }
-      .button-categoria {
-        font-family: $font-2;
-        font-size: 14px;
-        text-align: center;
-        border-radius: 14px;
-        border: 1px solid #444444;
-        display: inline-block;
-        margin: 0 auto;
-        padding: 3px 20px;
-        text-decoration: none!important;
-        font-weight: 600!important;
-      }
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none !important;
+        z-index: 2;
+        img {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+        .button-categoria {
+          font-family: $font-2;
+          font-size: 14px;
+          text-align: center;
+          border-radius: 14px;
+          border: 1px solid #444444;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 3px 20px;
+          text-decoration: none !important;
+          font-weight: 600 !important;
+        }
       }
     }
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .vitrine-categorias {
     padding: 40px 10px;
   }
   .content-vitrine-categorias {
     position: relative;
-    max-width: 95%!important;
+    max-width: 95% !important;
 
-    display: block!important;
+    display: block !important;
     .slick-list {
       z-index: 2;
     }
@@ -82,10 +85,9 @@ $font-2: "Cinzel", serif;
       height: 30px;
       z-index: 3;
       font-size: 0;
-      border-radius: 50%!important;
+      border-radius: 50% !important;
     }
-    
-    
+
     button.slick-prev {
       background: #8e8e8e
         url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-left.png")

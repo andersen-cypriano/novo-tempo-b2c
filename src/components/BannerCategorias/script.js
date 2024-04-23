@@ -17,7 +17,10 @@ const bannerCategoria = {
       const title = this.createElement('div', 'button-categoria');
       title.innerHTML = `${element.title}`;
       element.appendChild(title)
-      document.querySelector('.content-vitrine-categorias').appendChild(element)
+
+      const contentItem = this.createElement('div', 'content-item-categorias');
+      contentItem.appendChild(element)
+      document.querySelector('.content-vitrine-categorias').appendChild(contentItem)
     })
 
     // REMOVE ALL MINI BANNERS
@@ -35,7 +38,7 @@ const bannerCategoria = {
       slidesToShow: 1,
       slidesToScroll: 1,
     });
-    console.log('create slick')
+    console.log('create slick!!')
   },
   init: function () {
     this.createContentBanner();
@@ -43,6 +46,7 @@ const bannerCategoria = {
     this.moveItensCategorias();
     
     window.matchMedia("(max-width: 768px)").matches ? this.createSlick() : null;
+    console.log('teste');
   }
 }
 
