@@ -32,8 +32,9 @@ $font-2: "Cinzel", serif;
       display: block;
       z-index: 1;
     }
-    a {
-      border-radius: 47% 47% 0 0;
+    div {
+      a {
+        border-radius: 47% 47% 0 0;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -45,6 +46,8 @@ $font-2: "Cinzel", serif;
         margin-bottom: 25px;
       }
       .button-categoria {
+        font-family: $font-2;
+        font-size: 14px;
         text-align: center;
         border-radius: 14px;
         border: 1px solid #444444;
@@ -52,7 +55,50 @@ $font-2: "Cinzel", serif;
         margin: 0 auto;
         padding: 3px 20px;
         text-decoration: none!important;
+        font-weight: 600!important;
       }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .vitrine-categorias {
+    padding: 40px 10px;
+  }
+  .content-vitrine-categorias {
+    position: relative;
+    max-width: 95%!important;
+
+    display: block!important;
+    .slick-list {
+      z-index: 2;
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      z-index: 3;
+      font-size: 0;
+      border-radius: 50%!important;
+    }
+    
+    
+    button.slick-prev {
+      background: #8e8e8e
+        url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-left.png")
+        center center no-repeat;
+      background-size: 54%;
+      left: -15px;
+    }
+    button.slick-next {
+      background: #8e8e8e
+        url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-right.png")
+        center center no-repeat;
+      background-size: 54%;
+      right: -15px;
     }
   }
 }
