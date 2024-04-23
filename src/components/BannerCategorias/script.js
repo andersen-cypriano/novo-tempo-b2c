@@ -30,11 +30,19 @@ const bannerCategoria = {
     sectionTitle.textContent = 'Categorias Mais Procuradas'
     document.querySelector('.vitrine-categorias').prepend(sectionTitle)
   },
+  createSlick: function () {
+    $('.content-vitrine-categorias').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+    console.log('create slick')
+  },
   init: function () {
     this.createContentBanner();
     this.createSectionTitle();
     this.moveItensCategorias();
-    console.log('ini banner categorias!!');
+    
+    window.matchMedia("(max-width: 768px)").matches ? this.createSlick() : null;
   }
 }
 

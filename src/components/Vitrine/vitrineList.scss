@@ -82,6 +82,10 @@ $font-2: "Cinzel", serif;
 
 
 @media(max-width:768px) {
+  #corpo .conteiner ul[data-produtos-linha] {
+    max-width: 97%!important;
+    width: 97%!important;
+  }
   #listagemProdutos {
     div[class*="vitrine-"] {
       + ul {
@@ -128,6 +132,15 @@ $font-2: "Cinzel", serif;
             }
             .preco-produto {
               margin-bottom: 15px;
+              .preco-a-partir {
+                text-align: center;
+                span {
+                  font-size: 11px!important;
+                }
+                strong {
+                  font-size: 13px!important;
+                }
+              }
               strong.preco-promocional {
                 font-size:12px;
                 color: #000;
@@ -158,6 +171,8 @@ $font-2: "Cinzel", serif;
                 font-family: $font-2!important;
                 text-align: center;
                 color: #444444!important;
+                font-size: 12px!important;
+                line-height: 0!important
               }
               &:hover {
                 background: transparent!important;
@@ -214,4 +229,6 @@ $font-2: "Cinzel", serif;
       }
     }
   }
+
+  
 }
