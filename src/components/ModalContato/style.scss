@@ -1,0 +1,108 @@
+#modalContato {
+  .modal-header {
+    .titulo {
+      color: #402D5D;
+      font-size: 16px;
+    }
+  }
+  form {
+    .modal-body {
+      > div {
+        > div {
+          &:nth-of-type(1) {
+            .control-group {
+              label {
+                font-size: 14px;
+                color: #444444;
+                text-align: left;
+              }
+              .controls {
+                input, select {
+                  width: 218px;
+                  height: 34px;
+                  border: 1px solid #402D5D;
+                  border-radius: 0;
+                }
+                textarea {
+                  width: 218px;
+                  border: 1px solid #402D5D;
+                  border-radius: 0;
+                }
+              }
+            }
+            a.botao {
+              background: #D6C1FF!important;
+              border-radius: 0!important;
+              border: 0!important;
+              font-size: 15px!important;
+              color: #000!important;
+              text-transform: uppercase!important;
+            }
+            button.principal {
+              background: #402D5D!important;
+              border-radius: 0!important;
+              border: 0!important;
+              font-size: 15px!important;
+              color: #FFF!important;
+              text-transform: uppercase!important;
+            }
+          }
+          &:nth-of-type(2) {}
+        }
+      }
+    }
+  }  
+}
+
+@media (max-width: 768px) {
+  form {
+    .modal-body {
+      > div {
+        > div {
+          &:nth-of-type(1) {
+            background: red;
+            .control-group {
+              label {
+                font-size: 14px;
+                color: #444444;
+                text-align: left;
+              }
+              .controls {
+                input, select {
+                  width: 100%!important;
+                  height: 34px;
+                  border: 1px solid #402D5D;
+                  border-radius: 0;
+                }
+                textarea {
+                  width: 100%!important;
+                  border: 1px solid #402D5D;
+                  border-radius: 0;
+                }
+              }
+            }
+            a.botao {
+              background: #D6C1FF!important;
+              border-radius: 0!important;
+              border: 0!important;
+              font-size: 15px!important;
+              color: #000!important;
+              text-transform: uppercase!important;
+              margin: 0!important;
+            }
+            button.principal {
+              background: #402D5D!important;
+              border-radius: 0!important;
+              border: 0!important;
+              font-size: 15px!important;
+              color: #FFF!important;
+              text-transform: uppercase!important;
+              margin: 0!important;
+            }
+          }
+          &:nth-of-type(2) {}
+        }
+      }
+    }
+  }  
+}
