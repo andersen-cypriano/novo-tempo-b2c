@@ -134,3 +134,12 @@ footer.content-footer {
     }
   }
 }
+
+@media (max-width: 768px) {
+  footer {
+    .container-center {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  }
+}
