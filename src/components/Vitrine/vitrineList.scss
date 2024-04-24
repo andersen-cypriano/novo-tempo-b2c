@@ -31,6 +31,10 @@ $font-2: "Cinzel", serif;
               border-radius: 17px;
               overflow: hidden;
               margin-bottom: 15px;
+              img {
+                border-radius: 17px;
+                overflow: hidden;
+              }
             }
             .info-produto {
               padding: 0;

@@ -38,10 +38,10 @@ const footer = {
     contentPayment.innerHTML = `
     <ul>
       <li>
-        <a href="#">Forma de Pagamento á combinar</a>
+        <a href="/pagina/forma-de-pagamento.html">Forma de Pagamento á combinar</a>
       </li>
       <li>
-        <a href="#">Envio á Combinar (FOB)</a>
+        <a href="/pagina/envio-a-combinar-fob.html">Envio á Combinar (FOB)</a>
       </li>
     </ul>
     `;
