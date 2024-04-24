@@ -17,7 +17,8 @@ const barraNewsLetter = {
       );
   },
   moveSectionNewsToTop: function () {
-    document.querySelector('#listagemProdutos > ul[data-produtos-linha]').after(document.querySelector('#barraNewsletter'));
+    document.querySelector('#listagemProdutos > ul[data-produtos-linha]') ?
+    document.querySelector('#listagemProdutos > ul[data-produtos-linha]').after(document.querySelector('#barraNewsletter')) : null
     
   },
   init: function () {
