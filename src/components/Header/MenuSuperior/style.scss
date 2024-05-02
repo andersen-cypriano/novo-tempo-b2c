@@ -1,0 +1,204 @@
+.menu.superior {
+  position: relative;
+  margin: 0;
+  background-color: #402d5d !important;
+  border-radius: 0 !important;
+}
+ul.nivel-um {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: unset!important;
+  &::after {
+    display: none;
+  }
+  > li {
+    position: unset!important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 10px;
+    &:hover {
+      background-color: #eadfff !important;
+      a {
+        strong.titulo {
+          color: #402d5d;
+        }
+      }
+    }
+    a {
+      strong.titulo {
+        color: #fff;
+      }
+    }
+  }
+  > li[class*='com-filho'] {
+    > a {
+      i {
+        background: transparent!important;
+      }
+    }
+    &:hover {
+      > a {
+        i {
+          background: transparent!important;
+        }
+      }
+      > ul.nivel-dois {
+        display: flex!important;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+ul.nivel-dois {
+  width: 100%;
+  min-width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+  background: rgba($color: #E3E6F8, $alpha: .95)!important;
+  padding: 20px!important;
+  > li {
+    background: transparent!important;
+    width: 150px!important;
+    padding: 0;
+    > a {
+      background: #402D5D!important;
+      color: #FFF!important;
+      padding: 0 10px;
+      font-size: 13px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0!important;
+      display: block;
+      i {
+        margin: 0;
+        right: 10px!important;
+        top: 0;
+        background: transparent!important;
+      }
+    }
+    > ul.nivel-tres {
+      width: 100%;
+      position: relative;
+      left: 0;
+    }
+    ul {
+      width: 100%;
+    }
+  }
+}
+
+ul.nivel-tres {
+  background-color: transparent!important;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important;
+  li {
+    border-color: rgba($color: #000000, $alpha: .2);
+    border-style: solid;
+    border-top-width: 0!important;
+    border-right-width: 0!important;
+    border-bottom-width: 1px!important;
+    border-left-width: 0!important;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .3)!important;
+    padding: 3px 10px!important;
+    a {
+      font-size: 14px!important;
+      color: #402D5D!important;
+    }
+    &:hover {
+      background: #402D5D!important;
+      > a {
+        color: #FFF!important;
+      }
+    }
+  }
+  li.com-filho {
+    > a {
+      i {
+        margin: 0;
+        top: 50%!important;
+        transform: translateY(-50%);
+        right: 0!important;
+        background: transparent;
+        background-color: transparent !important;
+        &::before {
+          color: #402D5D;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 678px) {
+  div[class="content-menu-mobile"] .open-menu {
+    display: block!important;
+  }
+  .menu-principal{
+    position: absolute!important;
+    width: 77vw!important;
+    top: 43px;
+    height: 70vh !important;
+    z-index: 10;
+    background: #EADFFF!important;
+    display: none;
+    padding: 0;
+    border-radius: 0 21px 0 0;
+    border: 1px solid #402D5D;
+    .borda-principal {
+      border: 0;
+    }
+    ul {
+      margin: 0;
+    }
+    ul.nivelUm {
+      height: 290px!important;
+      overflow-y: scroll!important;
+      padding: 0 0 20px 0;
+      margin-top: 30px;
+      > li {
+        padding: 0 10px;
+        > a {
+          color: #402D5D;
+          font-size: 16px;
+          display: flex;
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, .2);
+          justify-content: space-between;
+          padding: 10px 0;
+          i {
+            background: transparent;
+            &::before {
+              color: #402D5D;
+            }
+          }
+        }
+      }
+    }
+    ul.nivelDois, ul.nivelTres {
+      display: none;
+      > li {
+        padding: 0 10px;
+        > a {
+          color: #402D5D;
+          font-size: 16px;
+          display: flex;
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, .2);
+          justify-content: space-between;
+          padding: 10px 0;
+          i {
+            background: transparent;
+            &::before {
+              color: #402D5D;
+            }
+          }
+        }
+    }
+  }
+  
+}

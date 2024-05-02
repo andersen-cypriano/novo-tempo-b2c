@@ -128,20 +128,28 @@ const headerMObile = {
     const mainMenu = document.querySelector('.menu.superior');
 
     contentMenu.appendChild(mainMenu);
-    this.createSubMenu();
-  },
-  createSubMenu: function () {
-    document.querySelectorAll('ul[class^="nivel-"] > .com-filho > a').forEach(element => {
-      element.addEventListener('click', e => {
-          e.preventDefault();
-          element.nextElementSibling.classList.toggle('show-sub-menu');
-      })
+    document.querySelector('.menu.superior').className = 'menu-principal';
+    document.querySelectorAll('ul[class*="nivel-"').forEach(element => {
+      const nivelMenu = element.className;
+      switch (nivelMenu) {
+        case 'nivel-um':
+          element.className = 'nivelUm'
+          break;
+        case 'nivel-dois borda-alpha':
+          element.className = 'nivelDois'
+          break;
+        case 'nivel-tres':
+          element.className = 'nivelTres'
+          break;
+      
+        default:
+          break;
+      }
     })
-    
   },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header init')
+    console.log('header init3')
   },
 };
 
