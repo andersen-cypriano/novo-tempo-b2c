@@ -1,0 +1,105 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+.modal-modalNewsletter {
+  width: 80%!important;
+  max-width: 1170px;
+  top: 50%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%);
+  border-radius: 22px;
+  overflow: hidden;
+  .fancybox-skin {
+    background: #D6C1FF;
+  }
+  .fancybox-inner {
+    width: 100%!important;
+  }
+  .newsletter {
+    background: #D6C1FF!important;
+    > .interno {
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      &::before {
+        content: '';
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/star.svg") center center no-repeat;
+        display: block;
+        position: absolute;
+        left: 40px;
+        top: 0;
+      }
+      &::after {
+        content: '';
+        width: 100px;
+        min-width: 100px;
+        height: 120px;
+        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/flowers.png") center center no-repeat;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .content-infos-modal-newsletter {
+        .titulo {
+          font-family: $font-2;
+          color: #402D5D;
+          font-size: 50px!important;
+          font-weight: 800;
+          margin: 0!important;
+          i {
+            display: none;
+          }
+        }
+      }
+      .interno-conteudo {
+        > div {
+          margin: 0;
+        }
+        .newsletter-cadastro {
+          margin-top: 0!important;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          input {
+            font-family: $font-1;
+            width: 350px;
+            height: 41px;
+            border: 1px solid #6134BA;
+            border-radius: 21px;
+            background-color: transparent;
+            color: #402D5D!important;
+            &::placeholder {
+              color: #402D5D!important;
+            }
+          }
+          button {
+            position: relative;
+            font-family: $font-1;
+            width: 144px;
+            height:41px;
+            background: #6134BA;
+            border-radius: 21px;
+            border: 1px solid #6134BA;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            &::before {
+              content: "cadastrar";
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
