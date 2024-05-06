@@ -9,12 +9,12 @@ ul.nivel-um {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  position: unset!important;
+  position: unset !important;
   &::after {
     display: none;
   }
   > li {
-    position: unset!important;
+    position: unset !important;
     border: 0 !important;
     margin: 0 !important;
     padding: 0 10px;
@@ -32,20 +32,20 @@ ul.nivel-um {
       }
     }
   }
-  > li[class*='com-filho'] {
+  > li[class*="com-filho"] {
     > a {
       i {
-        background: transparent!important;
+        background: transparent !important;
       }
     }
     &:hover {
       > a {
         i {
-          background: transparent!important;
+          background: transparent !important;
         }
       }
       > ul.nivel-dois {
-        display: flex!important;
+        display: flex !important;
         gap: 10px;
       }
     }
@@ -57,15 +57,15 @@ ul.nivel-dois {
   min-width: 100%;
   height: 60vh;
   overflow-y: scroll;
-  background: rgba($color: #E3E6F8, $alpha: .95)!important;
-  padding: 20px!important;
+  background: rgba($color: #e3e6f8, $alpha: 0.95) !important;
+  padding: 20px !important;
   > li {
-    background: transparent!important;
-    width: 150px!important;
+    background: transparent !important;
+    width: 150px !important;
     padding: 0;
     > a {
-      background: #402D5D!important;
-      color: #FFF!important;
+      background: #402d5d !important;
+      color: #fff !important;
       padding: 0 10px;
       font-size: 13px;
       display: flex;
@@ -73,13 +73,13 @@ ul.nivel-dois {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin: 0!important;
+      margin: 0 !important;
       display: block;
       i {
         margin: 0;
-        right: 10px!important;
+        right: 10px !important;
         top: 0;
-        background: transparent!important;
+        background: transparent !important;
       }
     }
     > ul.nivel-tres {
@@ -94,25 +94,25 @@ ul.nivel-dois {
 }
 
 ul.nivel-tres {
-  background-color: transparent!important;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important;
+  background-color: transparent !important;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
   li {
-    border-color: rgba($color: #000000, $alpha: .2);
+    border-color: rgba($color: #000000, $alpha: 0.2);
     border-style: solid;
-    border-top-width: 0!important;
-    border-right-width: 0!important;
-    border-bottom-width: 1px!important;
-    border-left-width: 0!important;
-    border-bottom: 1px solid rgba($color: #000000, $alpha: .3)!important;
-    padding: 3px 10px!important;
+    border-top-width: 0 !important;
+    border-right-width: 0 !important;
+    border-bottom-width: 1px !important;
+    border-left-width: 0 !important;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3) !important;
+    padding: 3px 10px !important;
     a {
-      font-size: 14px!important;
-      color: #402D5D!important;
+      font-size: 14px !important;
+      color: #402d5d !important;
     }
     &:hover {
-      background: #402D5D!important;
+      background: #402d5d !important;
       > a {
-        color: #FFF!important;
+        color: #fff !important;
       }
     }
   }
@@ -120,35 +120,34 @@ ul.nivel-tres {
     > a {
       i {
         margin: 0;
-        top: 50%!important;
+        top: 50% !important;
         transform: translateY(-50%);
-        right: 0!important;
+        right: 0 !important;
         background: transparent;
         background-color: transparent !important;
         &::before {
-          color: #402D5D;
+          color: #402d5d;
         }
       }
     }
   }
 }
 
-
 @media (max-width: 678px) {
   div[class="content-menu-mobile"] .open-menu {
-    display: block!important;
+    display: block !important;
   }
-  .menu-principal{
-    position: absolute!important;
-    width: 77vw!important;
+  .menu-principal {
+    position: absolute !important;
+    width: 77vw !important;
     top: 43px;
     height: 70vh !important;
     z-index: 10;
-    background: #EADFFF!important;
+    background: #EADFFF !important;
     display: none;
     padding: 0;
     border-radius: 0 21px 0 0;
-    border: 1px solid #402D5D;
+    border: 1px solid #402d5d;
     .borda-principal {
       border: 0;
     }
@@ -156,49 +155,112 @@ ul.nivel-tres {
       margin: 0;
     }
     ul.nivelUm {
-      height: 290px!important;
-      overflow-y: scroll!important;
+      height: 290px !important;
+      overflow-y: scroll !important;
       padding: 0 0 20px 0;
       margin-top: 30px;
       > li {
         padding: 0 10px;
+        > a.menu-active {
+          background: #402d5d!important;
+          padding-left: 10px;
+          strong {
+            color: #FFF!important;
+          }
+          i {
+            color: #FFF!important;
+          }
+        }
         > a {
-          color: #402D5D;
+          color: #402d5d;
           font-size: 16px;
           display: flex;
           width: 100%;
-          border-bottom: 1px solid rgba(0, 0, 0, .2);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
           justify-content: space-between;
           padding: 10px 0;
           i {
             background: transparent;
             &::before {
-              color: #402D5D;
+              color: #402d5d;
             }
           }
         }
       }
     }
-    ul.nivelDois, ul.nivelTres {
+    ul.submenu-open {
+      display: block!important;
+    }
+    ul.nivelDois,
+    ul.nivelTres {
       display: none;
+      
       > li {
-        padding: 0 10px;
+        a.menu-active {
+          font-weight: 800;
+          i {
+            transition: all 0.5s!important;
+            transform: rotate(90deg);
+          }
+        }
+        a {
+          transition: all 0.5s!important;
+        }
         > a {
-          color: #402D5D;
+          color: #402d5d;
           font-size: 16px;
           display: flex;
           width: 100%;
-          border-bottom: 1px solid rgba(0, 0, 0, .2);
-          justify-content: space-between;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          justify-content: flex-start;
           padding: 10px 0;
+          padding-left: 10px;
           i {
+            margin-right: 15px;
+            transition: all 0.5s!important;
             background: transparent;
             &::before {
-              color: #402D5D;
+              color: #402d5d;
             }
           }
         }
+      }
+      >li.com-filho {
+        > a {
+          display: flex;
+          justify-content: space-between!important;
+          flex-direction: row-reverse!important;
+          padding-left: 10px;
+          i {
+            background: transparent;
+            &::before {
+              color: #402d5d;
+            }
+          }
+        }
+      } 
+    }
+    ul[class*="nivelDois"] {
+      background:rgb(178, 146, 248)!important;
+    }
+    ul[class*="nivelTres"] {
+      background:rgb(207, 184, 255)!important;
+      li {
+        a {
+          padding-left: 25px !important;
+        }
+        ul {
+        }
+      }
     }
   }
-  
+}
+
+
+
+@media(max-width:768px) {
+  .ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .astra-logo-svg {
+    width: 200px!important;
+    max-width: 200px!important;
+  }
 }

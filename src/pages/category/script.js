@@ -25,10 +25,20 @@ const categoryPage = {
     document.querySelector('.ordenar-listagem > div').prepend(contentFilter);
     document.querySelector('.coluna').prepend(contentButton);
   },
+  addEventListenerMenu: function () {
+    document.querySelector('.atributo-cor').classList.add('show-filtro-submenu');
+    
+    document.querySelectorAll('.coluna:has(.content-close) h4.titulo').forEach(element => {
+      element.addEventListener('click', ()=>{
+          element.nextElementSibling.classList.toggle('show-filtro-submenu')
+      })
+    })
+  },
   
   init: function () {
-    console.log('init filter');
+    console.log('init filter2');
     this.createFilterButton();
+    this.addEventListenerMenu();
   }
 }
 

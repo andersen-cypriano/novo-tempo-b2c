@@ -128,6 +128,10 @@ const headerMObile = {
     const mainMenu = document.querySelector('.menu.superior');
 
     contentMenu.appendChild(mainMenu);
+    this.changeClassElementsMenu();
+    this.addEventListenerWithSubMenu();
+  },
+  changeClassElementsMenu: function () {
     document.querySelector('.menu.superior').className = 'menu-principal';
     document.querySelectorAll('ul[class*="nivel-"').forEach(element => {
       const nivelMenu = element.className;
@@ -147,9 +151,32 @@ const headerMObile = {
       }
     })
   },
+  addEventListenerWithSubMenu: function () {
+    document.querySelectorAll('.nivelUm > li.com-filho >a').forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+        element.classList.toggle('menu-active')
+        element.nextElementSibling.classList.toggle('submenu-open')
+      })
+    })
+    document.querySelectorAll('.nivelDois > li.com-filho >a').forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+        element.classList.toggle('menu-active');
+        element.nextElementSibling.classList.toggle('submenu-open')
+      })
+    })
+    document.querySelectorAll('.nivelTres > li.com-filho >a').forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+        element.classList.toggle('menu-active');
+        element.nextElementSibling.classList.toggle('submenu-open')
+      })
+    })
+  },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header init3')
+    console.log('header init9')
   },
 };
 

@@ -58,7 +58,28 @@ const productPageMobile = {
     this.moveShareButton();
     this.moveDisponibilidade();
     document.querySelectorAll('.aproveite-tambem > ul > li > ul > li').length > 1 ? this.createSlickRecomendations() : null
-    console.log('slick initied!');
+    // this.twoColorsVariaton();
+  }
+}
+
+
+
+const twoColorsVariaton = {
+  searchTwoColorsVariation: function () {
+    document.querySelectorAll('.atributos a[data-variacao-nome]').forEach(element => {
+      const colors = element.getAttribute('data-variacao-nome').replace(' ','').split('/');
+      const color1Hex = colorList[`${colors[0].replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '')}`]
+      const color2Hex = colorList[`${colors[1].replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '')}`]
+      colors.length == 2 ? setHexColor(color1Hex, color2Hex, element) : null;
+    })
+  },
+  setHexColor: function (color1, color2, element) {
+    element.firstElementChild.classList.add('two-colors-variation');
+    console.log(element.firstElementChild)
+    element.firstElementChild.setAttribute("style", `border-color: ${color1} ${color2}`);
+  },
+  init: function () {
+    this.searchTwoColorsVariation();
   }
 }
 

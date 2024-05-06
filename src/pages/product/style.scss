@@ -1,9 +1,17 @@
 $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
 
-.pagina-produto {
+.two-colors-variation {
+  font-size: 0!important;
+  width: 25px!important;
+  height: 25px!important;
+  padding: 0!important;
+  border-width: 0 0 25px 25p!importantx;
+  border-style: solid!important;
+  padding: 0!important;
+  min-height: auto!important;
+  
 }
-
 // BREADCRUMB
 .breadcrumbs {
   border: 0;

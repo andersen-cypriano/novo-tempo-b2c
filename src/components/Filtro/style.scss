@@ -1,0 +1,115 @@
+$purple: #402d5d;
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+.coluna:has(.content-close) {
+  border-radius: 0px 21px 0px  0px!important;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  overflow: hidden!important;
+  height: 55vh;
+  overflow-y: scroll!important;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color: $purple, $alpha: .2); 
+  }
+
+  div[class="menu lateral"] {
+    display: none!important;
+    ul.nivel-um {
+      display: block!important;
+      li {
+        width: 100%!important;
+      }
+      > li[class^="categoria-id"] {
+        ul.nivel-dois, ul.nivel-tres {
+          display: block!important;
+          background: transparent!important;
+          overflow: hidden;
+          height: auto!important;
+          max-height: auto!important;
+          min-height: auto!important;
+          li {
+            &:hover {
+              background: transparent!important;
+            }
+            a {
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  div[class="menu lateral outras"] {
+    display: none;
+  }
+
+  .filtro-coluna {
+    padding: 0!important;
+    background: transparent!important;
+    > .filtro {
+      > h4.titulo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px!important;
+        background: #EADFFF!important;
+        cursor: pointer;
+        &::after {
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url(https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg) center center no-repeat;
+          background-size: contain;
+          
+        }
+        // SUBMENU
+        + div {
+          padding: 10px!important;
+          display: none;
+          ul {
+            li {
+              a {
+                label {
+                  font-family: $font-1;
+                  color: $purple!important;
+                  font-size: 13px!important;
+                  font-family: $font-1;
+                  small {
+                    color: $purple!important;
+                    font-size: 13px!important;
+                    font-family: $font-1;
+                  }
+                }
+              }
+              &:hover {
+                background-color: $purple;
+                a {
+                  label {
+                    color: #FFF!important;
+                    background: transparent!important;
+                    small {
+                      color: #FFF!important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .show-filtro-submenu {
+        display: block!important;
+      }
+    }
+  }
+}
+
