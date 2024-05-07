@@ -6,7 +6,7 @@ $font-2: "Cinzel", serif;
   width: 25px!important;
   height: 25px!important;
   padding: 0!important;
-  border-width: 0 0 25px 25p!importantx;
+  border-width: 0 0 25px 25px!important;
   border-style: solid!important;
   padding: 0!important;
   min-height: auto!important;
@@ -152,7 +152,11 @@ $font-2: "Cinzel", serif;
   }
 }
 .acoes-produto.preco-restrito {
+  &::after {
+    display: none!important;
+  }
   .comprar {
+    
     > a {
       font-size: 13px!important;
     }
@@ -221,6 +225,40 @@ $font-2: "Cinzel", serif;
 .disponibilidade-produto {
   span.estoque {
     display: none !important;
+  }
+}
+
+form.avise-me-form {
+  .avise-tit {
+    color: #402D5D!important;
+    font-size: 24px;
+  }  
+  .avise-descr {
+    margin: 15px 0;
+    color: #000 !important;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .avise-input {
+    .controls {
+      input {
+        border-radius: 0;
+        border: 1px solid #402D5D;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        color: #000;
+      }
+    }
+  }
+  .avise-btn {
+    input {
+      background: #402D5D!important;
+      color: #FFF;
+      font-size: 16px;
+      border-radius: 0;
+      width: 90%;
+    }
   }
 }
 

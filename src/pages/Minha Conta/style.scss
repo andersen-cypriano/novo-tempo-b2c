@@ -1,0 +1,121 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+.pagina-conta, .pagina-pedido-listar, .pagina-favorito-listar {
+  .breadcrumbs {
+    border: 0;
+    ul {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      li {
+        position: relative;
+        &:first-of-type {
+          &:before {
+            display: none !important;
+          }
+        }
+        &:before {
+          position: absolute;
+          left: -15px;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icone-arrow-right.svg")
+            center center no-repeat;
+          background-size: 70%;
+        }
+        a,
+        strong {
+          font-family: $font-2;
+          color: #1e103b;
+          font-weight: 800;
+          font-size: 13px;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 0;
+          i {
+            display: none;
+          }
+        }
+        border: 0;
+      }
+    }
+  }
+  .conta-menu {
+    i {
+      &::before {
+        color: #402D5D;
+      }
+    }
+    .nome-usuario {
+      color: #402D5D;
+    }
+    .menu-simples {
+      li {
+        a {
+          color: #402D5D;
+          font-size:14px;
+          background-color: transparent!important;
+        }
+      }
+    }
+  }
+  i[class^="icon-"]:before {
+    color: #402D5D;
+  }
+  .abas-conteudo {
+    
+    h3.titulo {
+      color: #402D5D;
+    }
+
+    fieldset {
+      ul.caixa-info {
+        li {
+          b {
+            font-size:13px
+          }
+          > span {
+            font-size:13px;
+            color: #402D5D!important;
+          }
+        }
+      }
+      .cor-secundaria {
+        color: #402D5D!important;
+      }
+      .titulo {
+        color: #402D5D;
+      }
+      legend {
+        color: #402D5D;
+      }
+
+    }
+  }
+  a {
+    border-radius: 0!important;
+  }
+  a[class*="botao principal"] {
+    i {
+      display: none;
+    }
+    background: #402D5D;
+    border-radius: 0;
+    font-size: 14px;
+  }
+  a[class*="botao pequeno"]:not(.principal) {
+    border: 1px solid #402D5D;
+    border-radius: 0;
+    color: #402D5D;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    i {
+      display: none;
+    }
+  }
+}

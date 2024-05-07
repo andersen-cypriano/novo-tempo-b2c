@@ -37,9 +37,36 @@ ul#ui-id-1 {
     > div {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      > div {
+      justify-content: space-around;
+      ul.sociais-topo {
         width: 50%;
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        margin: 0;
+        color: #000;
+        li {
+          line-height: 0!important;
+          i {
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
+            &:before {
+              content: '';
+              display: none;
+            }
+          }
+          i.icon-facebook {
+            background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-facebook.svg") center center no-repeat;
+            background-size: contain;
+          }
+          i.icon-instagram {
+            background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-instagram.svg") center center no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      > div {
       }
       .lista-redes {
         display: flex;
@@ -347,7 +374,7 @@ ul#ui-id-1 {
         .carrinho-interno {
           > ul {
             > li {
-              padding: 0
+              padding: 0;
             }
           }
           .carrinho-rodape {
@@ -355,7 +382,7 @@ ul#ui-id-1 {
               width: 100%;
               float: none;
               clear: both;
-              
+
               i {
                 font-size: 14px;
                 font-weight: 600;
@@ -376,12 +403,12 @@ ul#ui-id-1 {
               }
             }
             a.botao.principal {
-              border: 0!important;
-              background: #402d5d!important;
-              width: 100%!important;
-              margin-top: 20px!important;
+              border: 0 !important;
+              background: #402d5d !important;
+              width: 100% !important;
+              margin-top: 20px !important;
               i {
-                display: none!important;
+                display: none !important;
               }
             }
           }
@@ -410,8 +437,6 @@ ul#ui-id-1 {
     }
   }
 }
-
-
 
 #cabecalho {
   > .conteiner {

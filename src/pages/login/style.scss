@@ -114,6 +114,17 @@ $purple: #402d5d;
             display: block;
             padding: 5px;
             margin-bottom: 46px;
+            position: relative;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              width:30px;
+              height: 30px;
+              background: #402D5D;
+              bottom: -30px;
+              right: 0;
+            }
           }
           .icon-edit {
             display: flex;

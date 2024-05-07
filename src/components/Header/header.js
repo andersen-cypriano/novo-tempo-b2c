@@ -46,6 +46,11 @@ const headerDesktop = {
         element.nextSibling.textContent = text;
       });
   },
+  createSocialTopBar: function () {
+    const clone = document.querySelector('.content-footer .lista-redes ul').cloneNode(true);
+    clone.classList.add('sociais-topo')
+    document.querySelector('.content-top-bar .container-center .row-fluid').prepend(clone);
+  },
   createAlertBar: () => {
     const alertBar = createElement("div", "alert-bar");
     alertBar.appendChild(createElement("div", "container-center"));
@@ -107,6 +112,7 @@ const headerDesktop = {
   init: function () {
     this.createElementHeader();
     !isDesktop ? headerMObile.init() : null;
+    this.createSocialTopBar();
   },
 };
 

@@ -1,3 +1,6 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
 .menu.superior {
   position: relative;
   margin: 0;
@@ -12,6 +15,10 @@ ul.nivel-um {
   position: unset !important;
   &::after {
     display: none;
+  }
+  a {
+    font-family: $font-2!important;
+    font-weight: 600;
   }
   > li {
     position: unset !important;
@@ -29,6 +36,8 @@ ul.nivel-um {
     a {
       strong.titulo {
         color: #fff;
+        font-family: $font-2!important;
+        font-weight: 400;
       }
     }
   }

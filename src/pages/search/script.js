@@ -16,6 +16,9 @@ const searchPage = {
     const buttonClose = document.createElement('div');
     buttonClose.classList.add('close');
     buttonClose.innerHTML = `X`;
+    buttonClose.addEventListener('click', e => {
+      e.target.parentElement.parentElement.classList.remove('show-filter')
+    })
     contentButton.appendChild(buttonClose);
     
     contentFilter.appendChild(buttonFilter);
