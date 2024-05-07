@@ -229,7 +229,10 @@ div[class^="ordenar-listagem rodape"] {
   }
   ul {
     box-shadow: none!important;
+    display: flex;
+    gap: 5px;
     li {
+      
       a[href="#"], a:has(i) {
         width: 30px;
         height: 30px;
@@ -252,16 +255,18 @@ div[class^="ordenar-listagem rodape"] {
       a[rel="nofollow"] {
         background: #EADFFF;
         color: #402D5D;
+        border: 1px solid #402D5D!important;
       }
       a[rel="next"] {
         background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/icon-ionic-md-arrow-dropdown.svg") center center no-repeat;
         transform: rotate(270deg);
       }
     }
-    li.active {
-      a[rel="nofollow"] {
-        background: #402D5D;
-        color: #EADFFF;
+    > li[class="active"]{
+      > a {
+        background-color: #402D5D!important;
+        color: #EADFFF!important;
+        border: 1px solid #402D5D!important;
       }
     }
   }
