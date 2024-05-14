@@ -425,29 +425,6 @@ div[class^="ordenar-listagem rodape"] {
                   }
                 }
               }
-              .acoes-produto-responsiva {
-                position: relative!important;
-                a {
-                  border: 1px solid #402D5D;
-                  border-radius: 21px;
-                  background: transparent!important;
-                  width: 100%;
-                  display: flex;
-                  justify-content: center;
-                  padding: 5px!important;
-                  span.titulo {
-                    text-transform: uppercase;
-                    color: #444444;
-                    font-size: 12px!important;
-                    margin: 0;
-                    font-weight: 700;
-                    line-height: 14px!important;
-                  }
-                  i {
-                    display: none!important;
-                  }
-                }
-              }
             }
           }
         }

@@ -4,8 +4,10 @@ $font-2: "Cinzel", serif;
 @media (max-width: 768px) {
   #ui-id-1 {
     left: 0!important;
-    width: 84%!important;
+    min-width: 80%!important;
+    width: 80%!important;
     padding: 10px !important;
+    margin: 0!important;
   }
   header[class="header"] {
     width: 100%;

@@ -292,6 +292,7 @@ $font-2: "Cinzel", serif;
     justify-content: center;
     text-transform: uppercase;
     border-radius: 20px;
+    margin: 20px 0!important;
     i.icon-shopping-cart {
       display: none;
     }
@@ -485,11 +486,12 @@ form.avise-me-form {
                 background-color: #5772f9 !important;
                 font-size: 0;
 
-                height: 30px;
+                height: 40px;
                 overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 0!important;
                 &::before {
                   content: "Adicionar Ao Carrinho";
                   font-size: 14px !important;
@@ -498,6 +500,7 @@ form.avise-me-form {
                   font-weight: 600;
                   text-transform: uppercase;
                   color: #fff;
+                  line-height: 16px;
                 }
                 i {
                   display: none;
@@ -640,38 +643,6 @@ form.avise-me-form {
                 strong.preco-promocional {
                   font-size: 12px;
                   color: #000;
-                }
-              }
-            }
-            .acoes-produto-responsiva {
-              display: block !important;
-              position: relative !important;
-              a.tag-comprar {
-                max-width: 236px;
-                margin: 0 auto;
-                border-radius: 17px;
-                border: 1px solid #402d5d;
-
-                height: 30px;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: transparent !important;
-                span {
-                  font-size: 12px;
-                  font-weight: 600;
-                  text-transform: uppercase;
-                  font-family: $font-2 !important;
-                  text-align: center;
-                  color: #444444 !important;
-                }
-                &:hover {
-                  background: transparent !important;
-                  color: #444444 !important;
-                }
-                i {
-                  display: none;
                 }
               }
             }

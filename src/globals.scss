@@ -35,14 +35,14 @@ div[class="conteiner"] {
 .listagem-item {
   .preco-produto {
     .preco-parcela {
-      width: 100%!important;
-      position: relative!important;
-      display: flex!important;
-      align-items: center!important;
-      gap: 5px!important;
-      height: auto!important;
-      line-height: 0!important;
-      height: 0px!important;
+      width: 100% !important;
+      position: relative !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      height: auto !important;
+      line-height: 0 !important;
+      height: 0px !important;
     }
     .preco-promocional {
       font-size: 16px !important;
@@ -54,9 +54,10 @@ div[class="conteiner"] {
     .preco-a-partir {
       margin: 15px 0px;
       display: block;
-      span, strong {
-        font-size: 16px!important;
-        color: #000000!important;
+      span,
+      strong {
+        font-size: 16px !important;
+        color: #000000 !important;
       }
     }
   }
@@ -67,9 +68,9 @@ div[class="conteiner"] {
 
 .produto-avise {
   .avise-me-list {
-    background-color: rgba($color: #1e103b, $alpha: .95)!important;
+    background-color: rgba($color: #1e103b, $alpha: 0.95) !important;
     span {
-      font-family: $font-1!important;
+      font-family: $font-1 !important;
     }
   }
 }
@@ -80,25 +81,91 @@ div[class="conteiner"] {
 }
 .bandeiras-produto:has(.bandeira-indisponivel) {
   display: flex;
-    justify-content: center;
-    width: 100%;
-    border: 0!important;
-    left: 0!important;
+  justify-content: center;
+  width: 100%;
+  border: 0 !important;
+  left: 0 !important;
   .bandeira-indisponivel {
     padding: 10px 30px;
     background-color: #1e103b;
-    color: #FFF!important;
-    border: 0!important;
+    color: #fff !important;
+    border: 0 !important;
     font-size: 13px;
   }
 }
 
 @media (max-width: 768px) {
   #cabecalho {
-    padding-top: 0!important;
+    padding-top: 0 !important;
   }
   .conteiner-principal {
   }
+
+  .listagem-item {
+    div[class*="info-produto"]{
+      .preco-produto {
+        .preco-parcela {
+          font-family: $font-1!important;
+          color: #828282!important;
+          font-size: 10px!important;
+          strong {
+            font-family: $font-1!important;
+            font-size: 10px!important;
+            color: #828282!important;
+          }
+        }
+        font-family: $font-1!important;
+        strong[class="preco-promocional cor-principal titulo"] {
+          font-family: $font-1!important;
+          font-weight: 600;
+        }
+        span[class="preco-a-partir"] {
+          display: flex;
+          gap: 5px;
+          span {
+            font-size: 10px!important;
+          }
+          strong.preco-venda {
+            font-size: 16px!important;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .acoes-produto-responsiva {
+      position: relative !important;
+
+      a.tag-comprar {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 17px;
+        border: 1px solid #5772f9;
+        background-color: #5772f9 !important;
+        font-size: 0;
+
+        height: 40px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        &::before {
+          content: "Adicionar Ao Carrinho";
+          font-size: 11px !important;
+          text-align: center;
+          font-family: $font-2 !important;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #fff;
+          line-height: 13px;
+        }
+        span.titulo {
+          display: none;
+        }
+        i {
+          display: none;
+        }
+      }
+    }
+  }
 }
-
-
