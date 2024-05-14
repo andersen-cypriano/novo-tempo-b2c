@@ -30,7 +30,7 @@ $font-2: "Cinzel", serif;
         a,
         strong {
           font-family: $font-2;
-          color: #1e103b;
+          color: #061978 ;
           font-weight: 800;
           font-size: 13px;
           text-transform: uppercase;
@@ -47,16 +47,16 @@ $font-2: "Cinzel", serif;
   .conta-menu {
     i {
       &::before {
-        color: #402D5D;
+        color: #061978;
       }
     }
     .nome-usuario {
-      color: #402D5D;
+      color: #061978;
     }
     .menu-simples {
       li {
         a {
-          color: #402D5D;
+          color: #061978;
           font-size:14px;
           background-color: transparent!important;
         }
@@ -64,12 +64,12 @@ $font-2: "Cinzel", serif;
     }
   }
   i[class^="icon-"]:before {
-    color: #402D5D;
+    color: #061978;
   }
   .abas-conteudo {
     
     h3.titulo {
-      color: #402D5D;
+      color: #061978;
     }
 
     fieldset {
@@ -80,18 +80,18 @@ $font-2: "Cinzel", serif;
           }
           > span {
             font-size:13px;
-            color: #402D5D!important;
+            color: #061978!important;
           }
         }
       }
       .cor-secundaria {
-        color: #402D5D!important;
+        color: #061978!important;
       }
       .titulo {
-        color: #402D5D;
+        color: #061978;
       }
       legend {
-        color: #402D5D;
+        color: #061978;
       }
 
     }
@@ -103,14 +103,14 @@ $font-2: "Cinzel", serif;
     i {
       display: none;
     }
-    background: #402D5D;
+    background: #061978;
     border-radius: 0;
     font-size: 14px;
   }
   a[class*="botao pequeno"]:not(.principal) {
-    border: 1px solid #402D5D;
+    border: 1px solid #061978;
     border-radius: 0;
-    color: #402D5D;
+    color: #061978;
     font-size: 14px;
     font-weight: 500;
     background: transparent;

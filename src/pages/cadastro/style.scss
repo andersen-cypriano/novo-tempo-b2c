@@ -12,12 +12,12 @@ $font-2: "Cinzel", serif;
     .titulo {
       font-size: 16px;
       margin: 0;
-      color: #402D5D;
+      color: #061978;
       font-family: $font-1;
       small {
         font-family: $font-1;
         font-size: 16px;
-        color: #402D5D;
+        color: #061978;
         font-weight: 400;
       }
     }
@@ -34,20 +34,20 @@ $font-2: "Cinzel", serif;
         legend {
           border: 0;
           font-size: 14px;
-          color: #402D5D;
+          color: #061978;
           font-family: $font-1;
         }
         .control-group {
           label {
             font-size: 14px;
-            color: #402D5D;
+            color: #061978;
             font-family: $font-1;
             font-weight: 400!important;
             margin-bottom: 16px;
           }
           input {
             max-width: 359px;
-            border: 1px solid #402D5D!important;
+            border: 1px solid #061978!important;
             border-radius: 0!important;
             background: transparent!important;
             font-family: $font-1;
@@ -65,7 +65,7 @@ $font-2: "Cinzel", serif;
           legend {
             border: 0;
             font-size: 14px;
-            color: #402D5D;
+            color: #061978;
             font-family: $font-1;
           }
           ul#id_tipo {
@@ -75,7 +75,7 @@ $font-2: "Cinzel", serif;
               }
               label {
                 input[type="radio"] {
-                  accent-color: #402D5D;
+                  accent-color: #061978;
                 }
               }
             }
@@ -90,12 +90,12 @@ $font-2: "Cinzel", serif;
           legend.titulo {
             font-size: 16px;
             margin: 0;
-            color: #402D5D;
+            color: #061978;
             font-family: $font-1;
             small {
               font-family: $font-1;
               font-size: 16px;
-              color: #402D5D;
+              color: #061978;
               font-weight: 400;
             }
           }
@@ -112,7 +112,7 @@ $font-2: "Cinzel", serif;
               width: 290px;
               height:34px;
               border-radius: 0;
-              border: 1px solid #402D5D;
+              border: 1px solid #061978;
             }
 
           }
@@ -128,7 +128,7 @@ $font-2: "Cinzel", serif;
         font-family: $font-1;
       }
       button {
-        background: #402D5D;
+        background: #061978;
         box-shadow: 0px 3px 6px #00000029;
         color: #FFF;
         border: 0;

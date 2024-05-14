@@ -1,0 +1,147 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Cinzel", serif;
+
+.carrinho-checkout {
+  #login-content {
+    .identificacao-inner {
+      .identificacao-title {
+        color: #061978;
+        font-family: $font-2;
+      }
+      form#formularioLogin {
+        .control-group {
+          max-width: 90%;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          .email-box {
+            margin: 0!important;
+            input {
+              width: 300px;
+              height: 30px;
+              border-radius: 15px;
+              border: 1px solid #061978;
+            }
+          }
+          .submit-email {
+            position: relative;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid #061978;
+            position: relative;
+            background: #061978;
+            padding: 0;
+            color: #FFF;
+            font-size: 14px;
+
+          }
+        }
+      }
+    }
+  }
+  .campos-pedido {
+    .resumo-compra {
+      h6 {
+        color: #061978!important;
+      }
+    }
+  }
+}
+
+.checkout-alerta-seguro {
+  .checkout-alerta-seguro-tit {
+    color: #061978;
+  }
+  ul {
+    li {
+      i.icon-ok {
+        &::before {
+          color: #061978;
+        }
+      }
+    }
+  }
+}
+
+
+#formularioCheckout {
+  legend.titulo {
+    color: #061978;
+    a {
+      color: #061978;
+    }
+  }
+  .control-label {
+    color: #061978!important;
+  }
+  
+  ul#tipoCadastro {
+    li {
+      a {
+        b {
+          color: #061978!important;
+        }
+      }
+    }
+  }
+}
+
+#formas-pagamento-wrapper {
+  .acao-editar {
+    #finalizarCompra {
+      background: #061978;
+      font-size: 16px;
+      i {
+        display: none;
+      }
+
+    }
+  }
+}
+
+
+@media(max-width:768px) {
+  .carrinho-checkout {
+    #login-content {
+      .identificacao-inner {
+        .identificacao-title {
+          color: #061978;
+          font-family: $font-2;
+          font-size: 15px!important;
+        }
+        form#formularioLogin {
+          .control-group {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .email-box {
+              margin: 0 auto!important;
+              input {
+                width: 300px;
+                height: 30px;
+                border-radius: 15px;
+                border: 1px solid #061978;
+              }
+            }
+            .submit-email {
+              position: relative;
+              height: 30px;
+              border-radius: 15px;
+              border: 1px solid #061978;
+              position: relative;
+              background: #061978;
+              padding: 0;
+              color: #FFF;
+              font-size: 14px;
+  
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
