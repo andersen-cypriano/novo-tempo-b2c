@@ -171,13 +171,22 @@ $font-2: "Cinzel", serif;
 
 }
 .acoes-produto {
+
   > div:has(.preco-produto) {
     .preco-produto {
       float: none !important;
       display: flex;
       flex-direction: column-reverse;
+      .preco-a-partir {
+        font-size: 23px;
+        color: #000;
+        strong[class="preco-venda cor-principal "] {
+          font-size: 16px!important;
+          color: #000!important;
+        }
+      }
       strong[class="preco-promocional cor-principal "] {
-        color: black;
+        color: black!important;
         font-weight: 700 !important;
         font-size: 23px !important;
       }
@@ -263,6 +272,31 @@ $font-2: "Cinzel", serif;
   height: 30px;
   background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/favorited.svg') center center no-repeat;
   right: -38px;
+}
+.parcelas-produto {
+  > ul.show-options {
+    margin-top: 10px!important;
+    display: block!important;
+  }
+  .button-payments {
+    font-size:14px;
+    color: #1E103B;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/icondown.svg') center center no-repeat;
+      background-size: contain;
+    }
+  }
+  ul.accordion {
+    display: none;
+  }
 }
 .principal:has(.adicionar-favorito ) {
   .btn-favoritar {
@@ -385,9 +419,9 @@ form.avise-me-form {
               .preco-a-partir {
                 font-size: 16px;
                 color: #000;
-                strong {
-                  font-size: 16px;
-                  color: #000;
+                strong[class="preco-venda cor-principal "] {
+                  font-size: 16px!important;
+                  color: #000!important;
                 }
               }
             }

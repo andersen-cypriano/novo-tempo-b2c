@@ -25,7 +25,20 @@ const productPage = {
     this.moveButtonShare();
     this.moveButtonDisponibilidade();
   },
+  createButtonPayments: function () {
+    const buttonPayments = document.createElement('div');
+    buttonPayments.classList.add('button-payments');
+    buttonPayments.textContent = 'FORMAS DE PAGAMENTO';
+    buttonPayments.addEventListener('click', e => {
+      e.target.nextElementSibling.classList.toggle('show-options')
+    })
+    document.querySelectorAll('div[class^="parcelas-produto"]').forEach(element => {
+      element.prepend(buttonPayments);
+    })
+  },
   init: function () {
+    this.createButtonPayments();
+    console.log('teste6');
     this.moveElements();
     window.matchMedia("(max-width: 768px)").matches ? productPageMobile.init() : null;
   }
