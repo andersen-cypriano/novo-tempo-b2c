@@ -47,7 +47,7 @@ $font-2: "Cinzel", serif;
         table.tabela-carrinho {
           thead {
             tr {
-              background: #BF90DE;
+              background: #AAB8FC;
               th {
                 h6 {
                   text-align: center;
@@ -75,6 +75,63 @@ $font-2: "Cinzel", serif;
                 + td {
                   border-left: 0;
                   border-left-width: 0;
+                }
+              }
+            }
+            tr:has(.formas-envio) {
+              td {
+                &:nth-of-type(1) {
+                  #formCalcularFrete {
+                    .control-group {
+                      display: flex;
+                      gap: 10px;
+                      label[for="calcularFrete"] {
+                        width: auto;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #444444;
+                      }
+                      .controls {
+                        margin: 0!important;
+                        .input-append {
+                          display: flex;
+                          gap: 10px;
+                          #calcularFrete{
+                            width: 300px;
+                            height: 30px;
+                            border: 1px solid #2A3778;
+                            border-radius: 15px;
+                            background: transparent;
+                          }
+                          button.btn {
+                            background: #2A3778;
+                            font-size: 0;
+                            border-radius: 15px!important;
+                            border: 1px solid #2A3778;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 15px;
+                            &:before {
+                              content: 'Calcular';
+                              display: block;
+                              font-size:12px!important;
+                              color: #FFF;
+                              text-transform: uppercase;
+                              outline: none;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                &:nth-of-type(2) {
+                  .formas-envio {
+                    label.radio {
+                      text-align: right;
+                    }
+                  }
                 }
               }
             }
@@ -126,7 +183,7 @@ $font-2: "Cinzel", serif;
             font-size: 14px;
             color: #8A40FF;
           }
-          a[data-target="#modalSolicitarOrcamento"] {
+          button {
             height: 41px;
             border: 1px solid #402D5D;
             font-size: 14px;
@@ -345,6 +402,17 @@ $font-2: "Cinzel", serif;
               justify-content: center;
               margin-top: 20px;
             }
+          }
+        }
+      }
+    }
+    #formCalcularFrete {
+      .controls {
+        .input-append {
+          flex-direction: column;
+          #calcularFrete {
+            width: 100%!important;
+            min-width: 100%!important;
           }
         }
       }
