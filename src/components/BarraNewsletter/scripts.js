@@ -16,15 +16,9 @@ const barraNewsLetter = {
         document.querySelector(".newsletter .interno .newsletter-cadastro")
       );
   },
-  moveSectionNewsToTop: function () {
-    document.querySelector('.pagina-inicial') ?
-    document.querySelector('#listagemProdutos > ul[data-produtos-linha]').after(document.querySelector('#barraNewsletter')) : document.querySelector('footer').before(document.querySelector('#barraNewsletter'))
-    
-  },
   init: function () {
     this.createElements();
     this.moveDescription();
-    this.moveSectionNewsToTop();
     console.log('move banner#')
   },
 };

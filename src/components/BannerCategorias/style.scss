@@ -18,7 +18,7 @@ $font-2: "Cinzel", serif;
     max-width: 80%;
     margin: 0 auto;
     display: flex;
-    gap: 30px;
+    gap: 0;
     justify-content: center;
     z-index: 3;
     &::after {
@@ -36,9 +36,13 @@ $font-2: "Cinzel", serif;
     div {
       position: relative;
       z-index: 3;
+      opacity: .7;
+      transition: all .5 ease;
+      &:hover {
+        transition: all .5 ease;
+        opacity: 1;
+      }
       a {
-        border-radius: 47% 47% 0 0;
-        overflow: hidden;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -54,6 +58,7 @@ $font-2: "Cinzel", serif;
           text-align: center;
           border-radius: 14px;
           border: 1px solid #444444;
+          color: #444444;
           display: inline-block;
           margin: 0 auto;
           padding: 3px 20px;
@@ -72,8 +77,10 @@ $font-2: "Cinzel", serif;
   .content-vitrine-categorias {
     position: relative;
     max-width: 95% !important;
-
     display: block !important;
+    .content-item-categorias {
+      opacity: 1!important;
+    }
     .slick-list {
       z-index: 2;
     }
@@ -83,7 +90,7 @@ $font-2: "Cinzel", serif;
       transform: translateY(-50%);
       width: 30px;
       height: 30px;
-      z-index: 3;
+      z-index: 5;
       font-size: 0;
       border-radius: 50% !important;
     }

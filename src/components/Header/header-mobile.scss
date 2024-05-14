@@ -8,9 +8,9 @@ $font-2: "Cinzel", serif;
     padding: 10px !important;
   }
   header[class="header"] {
-    width: 100vw;
-    position: fixed;
-    top: 0;
+    width: 100%;
+    position: sticky;
+    top: -70px!important;
     z-index: 100;
     background-color: #fff;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
@@ -36,12 +36,13 @@ $font-2: "Cinzel", serif;
           ul {
             position: relative;
             width: 100% !important;
-            flex-direction: column;
-            align-items: flex-end;
+            flex-direction: row;
+            align-items: center;
             gap: 0;
             li {
               &:nth-of-type(1) {
                 position: absolute;
+                width: 142px;
                 right: 43%;
                 top: 50%;
                 transform: translateY(-50%);
@@ -61,7 +62,7 @@ $font-2: "Cinzel", serif;
     height: 30px;
     padding: 20px;
     p {
-      font-size: 10px;
+      font-size: 9px!important;
     }
   }
 
@@ -70,7 +71,7 @@ $font-2: "Cinzel", serif;
     padding: 0 10px!important;
     div[class="content-menu-mobile"] {
       position: relative;
-      width: 40%;
+      width: 18%;
       .btn-menu-mobile {
         width: 30px;
         height: 30px;
@@ -93,13 +94,14 @@ $font-2: "Cinzel", serif;
       display: flex;
       justify-content: center;
       form#form-buscar {
+        width: 85%!important;
         input#auto-complete {
           height:37px!important;
         }
       }
     }
     .logo {
-      width: 31%!important;
+      width: 27%!important;
       a {
         img {
           height: 77px;
@@ -109,9 +111,10 @@ $font-2: "Cinzel", serif;
       }
     }
     .content-menu-user {
-      width: 40%;
+      width: 10%;
       display: flex;
       justify-content: flex-end;
+      gap: 10px!important;
       > .content-user {
         display: none;
       }
@@ -120,20 +123,21 @@ $font-2: "Cinzel", serif;
         .carrinho {
           width: 100%;
           height: 36px!important;
-          padding: 0 10px!important;
+          padding: 0!important;
           a {
           height: 32px;
             .icon-shopping-cart {
-              width:15px;
-              height:15px;
+              width: 25px;
+              height: 21px;
               margin: 0;
               &::before {
-                width:15px;
-                height:15px;
+                width: 25px;
+                height: 21px;
               }
             }
             .qtd-carrinho {
               font-size: 13px!important;
+              right: -4px!important;
             }
             b.titulo {
               font-size: 13px;

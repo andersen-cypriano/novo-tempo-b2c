@@ -2,15 +2,14 @@ $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
 
 .two-colors-variation {
-  font-size: 0!important;
-  width: 25px!important;
-  height: 25px!important;
-  padding: 0!important;
-  border-width: 0 0 25px 25px!important;
-  border-style: solid!important;
-  padding: 0!important;
-  min-height: auto!important;
-  
+  font-size: 0 !important;
+  width: 25px !important;
+  height: 25px !important;
+  padding: 0 !important;
+  border-width: 0 0 25px 25px !important;
+  border-style: solid !important;
+  padding: 0 !important;
+  min-height: auto !important;
 }
 // BREADCRUMB
 .breadcrumbs {
@@ -94,7 +93,6 @@ $font-2: "Cinzel", serif;
       }
     }
   }
-
 }
 
 .produto-compartilhar {
@@ -153,19 +151,44 @@ $font-2: "Cinzel", serif;
 }
 .acoes-produto.preco-restrito {
   &::after {
-    display: none!important;
+    display: none !important;
   }
   .comprar {
-    
     > a {
-      font-size: 13px!important;
+      font-size: 13px !important;
     }
   }
+}
+
+.produto .acoes-produto .preco-produto.destaque-parcela .preco-promocional {
+  color: black;
+  font-weight: 700 !important;
+  font-size: 23px !important;
+}
+.principal .acoes-produto > div span {
+  color: #000!important;
+  font-size: 14px!important;
+
 }
 .acoes-produto {
   > div:has(.preco-produto) {
     .preco-produto {
       float: none !important;
+      display: flex;
+      flex-direction: column-reverse;
+      strong[class="preco-promocional cor-principal "] {
+        color: black;
+        font-weight: 700 !important;
+        font-size: 23px !important;
+      }
+      .preco-parcela {
+        color: black;
+        font-size: 13px !important;
+        strong {
+          color: black;
+          font-size: 13px !important;
+        }
+      }
       .titulo {
         font-family: $font-1;
         font-size: 23px;
@@ -174,6 +197,9 @@ $font-2: "Cinzel", serif;
       }
     }
   }
+}
+.adicionar-favorito {
+  display: none;
 }
 .comprar {
   float: none !important;
@@ -187,7 +213,7 @@ $font-2: "Cinzel", serif;
       clear: both;
       float: none;
       font-size: 0 !important;
-      color: #402d5d !important;
+      color: #1E103B !important;
       line-height: 12px;
       font-weight: 500;
       display: flex;
@@ -196,30 +222,53 @@ $font-2: "Cinzel", serif;
       &:before {
         content: "Quantidade";
         font-size: 13px;
-        color: #402d5d !important;
+        color: #1E103B !important;
         font-weight: 500;
       }
     }
     .qtde-carrinho {
       width: 139px !important;
       height: 30px;
-      border: 1px solid #402d5d;
+      border: 1px solid #1E103B;
       border-radius: 0;
     }
   }
 
   a.botao-comprar {
+    position: relative;
     width: 300px;
     height: 40px;
-    background: #402d5d;
+    background: #5772F9;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    border-radius: 20px;
     i.icon-shopping-cart {
       display: none;
     }
+
+    + .disponibilidade-produto {
+      display: none!important;
+    }
+  }
+}
+.lista-favoritos {
+  display: none!important;
+}
+.btn-favoritar {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/favorited.svg') center center no-repeat;
+  right: -38px;
+}
+.principal:has(.adicionar-favorito ) {
+  .btn-favoritar {
+    width: 30px;
+    height: 30px;
+    background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/black-star-silhouette.png') center center no-repeat;
   }
 }
 .disponibilidade-produto {
@@ -230,9 +279,9 @@ $font-2: "Cinzel", serif;
 
 form.avise-me-form {
   .avise-tit {
-    color: #402D5D!important;
+    color: #402d5d !important;
     font-size: 24px;
-  }  
+  }
   .avise-descr {
     margin: 15px 0;
     color: #000 !important;
@@ -243,7 +292,7 @@ form.avise-me-form {
     .controls {
       input {
         border-radius: 0;
-        border: 1px solid #402D5D;
+        border: 1px solid #402d5d;
         height: 30px;
         padding: 0;
         text-align: center;
@@ -253,8 +302,8 @@ form.avise-me-form {
   }
   .avise-btn {
     input {
-      background: #402D5D!important;
-      color: #FFF;
+      background: #402d5d !important;
+      color: #fff;
       font-size: 16px;
       border-radius: 0;
       width: 90%;
@@ -329,7 +378,7 @@ form.avise-me-form {
               a.nome-produto {
                 font-size: 16px;
                 color: #000;
-                font-weight: 400!important;
+                font-weight: 400 !important;
               }
               .preco-produto {
               }
@@ -395,7 +444,7 @@ form.avise-me-form {
   }
   .info-principal-produto {
     border: 0 !important;
-    margin-bottom: 50px!important;
+    margin-bottom: 50px !important;
     h1.nome-produto {
       font-size: 20px;
       line-height: 23px;

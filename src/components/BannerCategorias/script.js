@@ -10,7 +10,7 @@ const bannerCategoria = {
     const content = this.createElement('div', 'content-vitrine-categorias');
     contentBanner.appendChild(content);
 
-    document.querySelector('#listagemProdutos > ul[data-produtos-linha]').after(contentBanner);
+    document.querySelector('#corpo').prepend(contentBanner);
   },
   moveItensCategorias: function() {
     document.querySelectorAll('.mini-banner a').forEach(element => {

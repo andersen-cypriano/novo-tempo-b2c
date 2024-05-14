@@ -58,14 +58,14 @@ const productPageMobile = {
     this.moveShareButton();
     this.moveDisponibilidade();
     document.querySelectorAll('.aproveite-tambem > ul > li > ul > li').length > 1 ? this.createSlickRecomendations() : null
-    
   }
 }
 
+document.querySelectorAll('.botao-comprar').forEach(element => {
+  const btnFavorite = document.createElement('a');
+  btnFavorite.setAttribute('href', `https://loja-novo-tempo-b2c.lojaintegrada.com.br/conta/favorito/${PRODUTO_ID}/adicionar`);
+  btnFavorite.classList.add('btn-favoritar');
 
-
-
-
-
+  element.appendChild(btnFavorite);
+})
 productPage.init();
-

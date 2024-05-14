@@ -3,9 +3,10 @@ $font-2: "Cinzel", serif;
 
 #barraNewsletter {
   position: relative;
-  background: #d6c1ff !important;
+  background: #AAB8FC !important;
   z-index: 10;
   height: 120px;
+  margin-bottom: 50px;
   .conteiner {
     max-width: 1280px;
     margin: 0 auto;
@@ -45,7 +46,7 @@ $font-2: "Cinzel", serif;
     input[name="email"] {
       width: 348px;
       height: 40px;
-      border: 1px solid #6134ba;
+      border: 1px solid #1e103b;
       border-radius: 40px;
       padding-left: 30px;
     }
@@ -54,27 +55,30 @@ $font-2: "Cinzel", serif;
       height: 40px;
       width: 144px;
       border: 0;
-      background: #6134ba;
+      background: #1e103b;
+      color: #fff;
     }
   }
 }
 .hands-newsletter {
   position: absolute;
-  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/hands.png")
+  background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/cards.svg")
     no-repeat;
   width: 146px;
-  height: 131px;
-  top: -12px;
+  height: 180px;
+  top: -30px;
   left: 0;
 }
 .flowers-newsletter {
   position: absolute;
-  top: 0;
+  top: -31px;
   right: 0;
-  width: 104px;
+  width: 185px;
+  background-size: contain !important;
   height: 117px;
-  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/flowers.png")
+  background: url(https://cdn.awsli.com.br/2524/2524796/arquivos/plant.svg)
     no-repeat;
+  background-size: contain !important;
 }
 
 @media (max-width: 768px) {
@@ -115,7 +119,7 @@ $font-2: "Cinzel", serif;
       width: 76px;
       height: 69px;
       bottom: 0;
-      top: auto;
+      top: 10px;
       background-size: contain;
     }
     .flowers-newsletter {
@@ -123,7 +127,7 @@ $font-2: "Cinzel", serif;
       top: auto;
       right: 10px;
       width: 74px;
-      height: 83px;
+      height: 52px;
       background-size: contain;
     }
   }

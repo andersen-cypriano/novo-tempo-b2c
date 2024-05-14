@@ -1,0 +1,22 @@
+.tarja {
+  margin: 0!important;
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  a {
+    width: 50%;
+    display: block!important;
+    img {
+      width: 100%!important;
+    }
+  }
+}
+
+@media(max-width: '768px') {
+  .tarja {
+    flex-direction: column;
+    a {
+      width: 100%!important;
+    }
+  }
+}

@@ -3,8 +3,8 @@ $font-2: "Cinzel", serif;
 
 #listagemProdutos {
   > div[class^="titulo-"] {
-    background: transparent!important;
-    padding-left: 0!important;
+    background: transparent !important;
+    padding-left: 0 !important;
     border: 0;
     padding: 0;
     strong {
@@ -21,10 +21,10 @@ $font-2: "Cinzel", serif;
         display: flex;
         justify-content: space-between;
         &::after {
-          display: none!important;
+          display: none !important;
         }
         > li {
-          border: 0!important;
+          border: 0 !important;
           margin: 0;
           .listagem-item {
             .imagem-produto {
@@ -39,10 +39,11 @@ $font-2: "Cinzel", serif;
             .info-produto {
               padding: 0;
               a.nome-produto {
-                font-size:16px;
+                font-size: 16px;
                 color: #000;
               }
-              .preco-produto {}
+              .preco-produto {
+              }
             }
             .acoes-produto {
               position: relative;
@@ -55,21 +56,22 @@ $font-2: "Cinzel", serif;
                 max-width: 100%;
                 margin: 0 auto;
                 border-radius: 17px;
-                border: 1px solid #402D5D;
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                font-family: $font-2!important;
-                text-align: center;
-                color: #444444;
+                border: 1px solid #5772f9;
+                background-color: #5772f9 !important;
+                font-size: 0;
+
                 height: 30px;
                 overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: transparent!important;
-                &:hover {
-                  background: #402D5D!important;
+                &::before {
+                  content: "Adicionar Ao Carrinho";
+                  font-size: 14px !important;
+                  text-align: center;
+                  font-family: $font-2 !important;
+                  font-weight: 600;
+                  text-transform: uppercase;
                   color: #fff;
                 }
                 i {
@@ -84,11 +86,10 @@ $font-2: "Cinzel", serif;
   }
 }
 
-
-@media(max-width:768px) {
+@media (max-width: 768px) {
   #corpo .conteiner ul[data-produtos-linha] {
-    max-width: 97%!important;
-    width: 97%!important;
+    max-width: 97% !important;
+    width: 97% !important;
   }
   #listagemProdutos {
     div[class*="vitrine-"] {
@@ -108,18 +109,23 @@ $font-2: "Cinzel", serif;
           }
         }
         button.slick-prev {
-          background: #8E8E8E url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-left.png") center center no-repeat;
+          background: #8e8e8e
+            url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-left.png")
+            center center no-repeat;
           background-size: 54%;
           left: 0;
         }
         button.slick-next {
-          background: #8E8E8E url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-right.png") center center no-repeat;
+          background: #8e8e8e
+            url("https://cdn.awsli.com.br/2454/2454272/arquivos/arrow-right.png")
+            center center no-repeat;
           background-size: 54%;
           right: 0;
         }
         .listagem-item {
           width: auto;
-          a {}
+          a {
+          }
           .imagem-produto {
             border-radius: 17px;
             overflow: hidden;
@@ -131,7 +137,7 @@ $font-2: "Cinzel", serif;
           .info-produto {
             padding: 0;
             a.nome-produto {
-              font-size:12px;
+              font-size: 12px;
               color: #000;
             }
             .preco-produto {
@@ -139,49 +145,56 @@ $font-2: "Cinzel", serif;
               .preco-a-partir {
                 text-align: center;
                 span {
-                  font-size: 11px!important;
+                  font-size: 11px !important;
                 }
                 strong {
-                  font-size: 13px!important;
+                  font-size: 13px !important;
                 }
               }
               strong.preco-promocional {
-                font-size:12px;
+                font-size: 12px;
                 color: #000;
               }
             }
           }
           .acoes-produto-responsiva {
-            display: block!important;
-            position: relative!important;
+            display: block !important;
+            position: relative !important;
             a.tag-comprar {
               max-width: 236px;
               margin: 0 auto;
               border-radius: 17px;
-              border: 1px solid #402D5D;
-              
-              
-              
-              height: 30px;
+              border: 1px solid #5772f9;
+
+              height: 40px;
               overflow: hidden;
               display: flex;
               align-items: center;
               justify-content: center;
-              background: transparent!important;
+              background: #5772f9 !important;
               span {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                font-family: $font-2!important;
-                text-align: center;
-                color: #444444!important;
-                font-size: 12px!important;
-                line-height: 0!important
+                font-size: 0px !important;
+                &::before {
+                  content: "Adicionar Ao Carrinho";
+                  font-size: 12px !important;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  font-family: $font-2 !important;
+                  text-align: center;
+                  color: #fff !important;
+                  font-size: 12px !important;
+                  width: 100%;
+                  display: flex;
+                  margin: 0;
+                  height: 40px;
+                  top: 25px;
+                  position: relative;
+                  line-height: 16px!important;
+                }
               }
               &:hover {
-                background: transparent!important;
-                color: #444444!important;
-                
+                background: transparent !important;
+                color: #444444 !important;
               }
               i {
                 display: none;
@@ -199,11 +212,11 @@ $font-2: "Cinzel", serif;
               max-width: 236px;
               margin: 0 auto;
               border-radius: 17px;
-              border: 1px solid #402D5D;
+              border: 1px solid #402d5d;
               font-size: 14px;
               font-weight: 600;
               text-transform: uppercase;
-              font-family: $font-2!important;
+              font-family: $font-2 !important;
               text-align: center;
               color: #444444;
               height: 30px;
@@ -211,9 +224,9 @@ $font-2: "Cinzel", serif;
               display: flex;
               align-items: center;
               justify-content: center;
-              background: transparent!important;
+              background: transparent !important;
               &:hover {
-                background: #402D5D!important;
+                background: #402d5d !important;
                 color: #fff;
               }
               i {
@@ -226,13 +239,11 @@ $font-2: "Cinzel", serif;
     }
     > ul {
       li.listagem-linha {
-       > ul {
-        overflow: hidden;
-        flex-direction: column;
-       } 
+        > ul {
+          overflow: hidden;
+          flex-direction: column;
+        }
       }
     }
   }
-
-  
 }
