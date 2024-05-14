@@ -12,10 +12,14 @@ const categoryPage = {
     `
     const contentButton = document.createElement('div');
     contentButton.classList.add('content-close')
+    
 
     const buttonClose = document.createElement('div');
     buttonClose.classList.add('close');
     buttonClose.innerHTML = `X`;
+    buttonClose.addEventListener('click', e => {
+      e.target.parentElement.parentElement.classList.remove('show-filter')
+    })
     contentButton.appendChild(buttonClose);
     
     contentFilter.appendChild(buttonFilter);
@@ -36,7 +40,7 @@ const categoryPage = {
   },
   
   init: function () {
-    console.log('init filter2');
+    console.log('init filter5');
     this.createFilterButton();
     this.addEventListenerMenu();
   }

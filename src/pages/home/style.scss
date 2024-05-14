@@ -1,3 +1,5 @@
+
+
 .secao-banners {
   div[class="conteiner"] {
     padding: 0;
@@ -21,6 +23,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 #corpo {
   .conteiner {
@@ -53,6 +56,18 @@
   a {
     img {
       width: 100%;
+    }
+  }
+}
+
+
+@media(max-width:768px) {
+  .pagina-inicial {
+    .conteiner-principal {
+      padding-top: 0!important;
+    }
+    .secao-banners {
+      padding-top: 56px!important;
     }
   }
 }

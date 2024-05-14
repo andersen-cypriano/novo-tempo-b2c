@@ -2,21 +2,22 @@ $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
 
 .modal-modalNewsletter {
-  width: 80%!important;
+  width: 80% !important;
   max-width: 1170px;
-  top: 50%!important;
-  left: 50%!important;
+  top: 50% !important;
+  left: 50% !important;
   transform: translate(-50%, -50%);
   border-radius: 22px;
   overflow: hidden;
   .fancybox-skin {
-    background: #D6C1FF;
+    background: #1e103b;
   }
   .fancybox-inner {
-    width: 100%!important;
+    width: 100% !important;
+    overflow: visible !important;
   }
   .newsletter {
-    background: #D6C1FF!important;
+    background: #1e103b !important;
     > .interno {
       width: 85%;
       margin: 0 auto;
@@ -25,37 +26,43 @@ $font-2: "Cinzel", serif;
       gap: 20px;
       align-items: center;
       &::before {
-        content: '';
-        width: 50px;
-        min-width: 50px;
-        height: 50px;
-        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/star.svg") center center no-repeat;
+        content: "";
+        width: 140px;
+        min-width: 140px;
+        height: 180px;
+        background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/cards.svg")
+          center center no-repeat;
+        background-size: contain;
         display: block;
         position: absolute;
-        left: 40px;
-        top: 0;
+        left: -50px;
+        top: -30px;
       }
       &::after {
-        content: '';
-        width: 100px;
-        min-width: 100px;
-        height: 120px;
-        background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/flowers.png") center center no-repeat;
+        content: "";
+        background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/crystal.svg")
+          center center no-repeat;
         display: block;
         position: absolute;
-        right: 0;
-        bottom: 0;
+        background-size: contain;
+        width: 92px;
+        height: 105px;
+        right: -50px;
+        bottom: -40px;
       }
       .content-infos-modal-newsletter {
         .titulo {
           font-family: $font-2;
-          color: #402D5D;
-          font-size: 50px!important;
+          color: #fff;
+          font-size: 50px !important;
           font-weight: 800;
-          margin: 0!important;
+          margin: 0 !important;
           i {
             display: none;
           }
+        }
+        p {
+          color: #fff;
         }
       }
       .interno-conteudo {
@@ -63,7 +70,7 @@ $font-2: "Cinzel", serif;
           margin: 0;
         }
         .newsletter-cadastro {
-          margin-top: 0!important;
+          margin-top: 0 !important;
           margin: 0;
           display: flex;
           align-items: center;
@@ -72,30 +79,90 @@ $font-2: "Cinzel", serif;
             font-family: $font-1;
             width: 350px;
             height: 41px;
-            border: 1px solid #6134BA;
+            border: 1px solid #fff;
             border-radius: 21px;
             background-color: transparent;
-            color: #402D5D!important;
+            color: #fff !important;
             &::placeholder {
-              color: #402D5D!important;
+              color: #fff !important;
             }
           }
           button {
             position: relative;
             font-family: $font-1;
             width: 144px;
-            height:41px;
-            background: #6134BA;
+            height: 41px;
+            background: #e3e6f8;
             border-radius: 21px;
-            border: 1px solid #6134BA;
-            padding:0;
+            border: 1px solid #e3e6f8;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #FFF;
+            color: #1e103b !important;
             &::before {
               content: "cadastrar";
               font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .modal-modalNewsletter {
+    width: 90% !important;
+    .fancybox-close {
+      background: transparent;
+      right: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        content: 'X';
+        font-size: 24px;
+        color: #FFF;
+      }
+    }
+    #modalNewsletter {
+      .newsletter {
+        .interno {
+          width: 100%;
+          margin: 0;
+          padding: 30px 0 !important;
+          flex-direction: column;
+          &::before {
+            width: 62px;
+            min-width: 62px;
+            height: 84px;
+            left: -29px;
+            top: -50px;
+          }
+          &::after {
+            width: 62px;
+            height: 105px;
+            right: -23px;
+            bottom: -51px;
+          }
+          .content-infos-modal-newsletter {
+            width: 100%;
+            text-align: center;
+            span.titulo {
+              font-size: 30px !important;
+            }
+          }
+          .interno-conteudo {
+            width: 100%!important;
+            .newsletter-cadastro {
+              width: 100%!important;
+              flex-direction: column;
+              input {
+                width: 100%;
+              }
             }
           }
         }

@@ -25,8 +25,8 @@ const headerDesktop = {
 
     this.createTopBarContent();
     this.createAlertBar();
-    this.createSearchContent();
     this.createLogo();
+    this.createSearchContent();
     this.createContentMenuUser();
     this.moveMainMenu();
   },
@@ -46,11 +46,16 @@ const headerDesktop = {
         element.nextSibling.textContent = text;
       });
   },
+  createSocialTopBar: function () {
+    const clone = document.querySelector('.content-footer .lista-redes ul').cloneNode(true);
+    clone.classList.add('sociais-topo')
+    document.querySelector('.content-top-bar .container-center .row-fluid').prepend(clone);
+  },
   createAlertBar: () => {
     const alertBar = createElement("div", "alert-bar");
     alertBar.appendChild(createElement("div", "container-center"));
     alertBar.children[0].innerHTML = `
-      <p>SITE EXCLUSIVO PARA LOJISTAS. COMPRAS PARA USO PESSOAL <a href="/" target="_blank">CLIQUE AQUI</a>.</p>
+      <p>É LOJISTA, QUER COMPRAR NO ATACADO? <a href="/" target="_blank">CLIQUE AQUI</a>.</p>
     `;
     document.querySelector(".content-top-bar").after(alertBar);
   },
@@ -85,8 +90,17 @@ const headerDesktop = {
 
     document.querySelector(".content-user > a.bem-vindo").innerHTML = `
       <span class="icon-welcome"></span>
-      <p>Entrar / Cadastre-se</p>
+      
     `;
+
+    const contentFavoriteButton = createElement(
+      "a",
+      "content-button-favorite"
+    );
+    contentFavoriteButton.setAttribute("href","/conta/favorito/listar")
+    document
+      .querySelector("header .content-header .content-menu-user")
+      .appendChild(contentFavoriteButton);
 
     const contentButtonMiniCart = createElement(
       "div",
@@ -107,6 +121,7 @@ const headerDesktop = {
   init: function () {
     this.createElementHeader();
     !isDesktop ? headerMObile.init() : null;
+    this.createSocialTopBar();
   },
 };
 
@@ -176,7 +191,7 @@ const headerMObile = {
   },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header init9')
+    console.log('HEADER')
   },
 };
 
