@@ -166,27 +166,65 @@ $font-2: "Cinzel", serif;
   font-size: 23px !important;
 }
 .principal .acoes-produto > div span {
-  color: #000!important;
-  font-size: 14px!important;
-
+  color: #000 !important;
+  font-size: 14px !important;
+}
+.cep {
+  .button-cep {
+    font-size: 14px;
+    color: #1e103b;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  #formCalcularCep {
+    .form-inline {
+      div:has(input[name="cep"]) {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px!important;
+        input[name="cep"]{
+          width: 300px;
+          height: 30px;
+          border: 1px solid #2A3778;
+          border-radius: 15px;
+        }
+        button.btn {
+          background: #2A3778;
+          font-size: 0;
+          border-radius: 15px!important;
+          border: 1px solid #2A3778;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 15px;
+          &:before {
+            content: 'Calcular';
+            display: block;
+            font-size:12px!important;
+            color: #FFF;
+            text-transform: uppercase;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
 }
 .acoes-produto {
-
   > div:has(.preco-produto) {
     .preco-produto {
       float: none !important;
       display: flex;
       flex-direction: column-reverse;
       .preco-a-partir {
-        font-size: 23px;
         color: #000;
         strong[class="preco-venda cor-principal "] {
-          font-size: 16px!important;
-          color: #000!important;
+          font-size: 23px !important;
+          color: #000 !important;
         }
       }
       strong[class="preco-promocional cor-principal "] {
-        color: black!important;
+        color: black !important;
         font-weight: 700 !important;
         font-size: 23px !important;
       }
@@ -222,7 +260,7 @@ $font-2: "Cinzel", serif;
       clear: both;
       float: none;
       font-size: 0 !important;
-      color: #1E103B !important;
+      color: #1e103b !important;
       line-height: 12px;
       font-weight: 500;
       display: flex;
@@ -231,14 +269,14 @@ $font-2: "Cinzel", serif;
       &:before {
         content: "Quantidade";
         font-size: 13px;
-        color: #1E103B !important;
+        color: #1e103b !important;
         font-weight: 500;
       }
     }
     .qtde-carrinho {
       width: 139px !important;
       height: 30px;
-      border: 1px solid #1E103B;
+      border: 1px solid #1e103b;
       border-radius: 0;
     }
   }
@@ -247,7 +285,7 @@ $font-2: "Cinzel", serif;
     position: relative;
     width: 300px;
     height: 40px;
-    background: #5772F9;
+    background: #5772f9;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -259,38 +297,40 @@ $font-2: "Cinzel", serif;
     }
 
     + .disponibilidade-produto {
-      display: none!important;
+      display: none !important;
     }
   }
 }
 .lista-favoritos {
-  display: none!important;
+  display: none !important;
 }
 .btn-favoritar {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/favorited.svg') center center no-repeat;
+  background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/favorited.svg")
+    center center no-repeat;
   right: -38px;
 }
 .parcelas-produto {
   > ul.show-options {
-    margin-top: 10px!important;
-    display: block!important;
+    margin-top: 10px !important;
+    display: block !important;
   }
   .button-payments {
-    font-size:14px;
-    color: #1E103B;
+    font-size: 14px;
+    color: #1e103b;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
     &::after {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
-      background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/icondown.svg') center center no-repeat;
+      background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/icondown.svg")
+        center center no-repeat;
       background-size: contain;
     }
   }
@@ -298,11 +338,12 @@ $font-2: "Cinzel", serif;
     display: none;
   }
 }
-.principal:has(.adicionar-favorito ) {
+.principal:has(.adicionar-favorito) {
   .btn-favoritar {
     width: 30px;
     height: 30px;
-    background: url('https://cdn.awsli.com.br/2524/2524796/arquivos/black-star-silhouette.png') center center no-repeat;
+    background: url("https://cdn.awsli.com.br/2524/2524796/arquivos/black-star-silhouette.png")
+      center center no-repeat;
   }
 }
 .disponibilidade-produto {
@@ -351,6 +392,7 @@ form.avise-me-form {
     padding: 0;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     #descricao {
+      font-size: 14px;
       &:before {
         content: "Descrição";
         display: block;
@@ -376,9 +418,12 @@ form.avise-me-form {
     }
   }
 }
-
+#buy-together-position1 {
+  display: none!important;
+}
 .aproveite-tambem {
   h4.titulo {
+    font-family: $font-2;
     font-size: 23px;
     font-weight: 700;
     color: #1e103b;
@@ -420,8 +465,8 @@ form.avise-me-form {
                 font-size: 16px;
                 color: #000;
                 strong[class="preco-venda cor-principal "] {
-                  font-size: 16px!important;
-                  color: #000!important;
+                  font-size: 16px !important;
+                  color: #000 !important;
                 }
               }
             }
@@ -436,21 +481,22 @@ form.avise-me-form {
                 max-width: 100%;
                 margin: 0 auto;
                 border-radius: 17px;
-                border: 1px solid #402d5d;
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                font-family: $font-2 !important;
-                text-align: center;
-                color: #444444;
+                border: 1px solid #5772f9;
+                background-color: #5772f9 !important;
+                font-size: 0;
+
                 height: 30px;
                 overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: transparent !important;
-                &:hover {
-                  background: #402d5d !important;
+                &::before {
+                  content: "Adicionar Ao Carrinho";
+                  font-size: 14px !important;
+                  text-align: center;
+                  font-family: $font-2 !important;
+                  font-weight: 600;
+                  text-transform: uppercase;
                   color: #fff;
                 }
                 i {
@@ -466,6 +512,11 @@ form.avise-me-form {
 }
 
 @media (max-width: 768px) {
+  .pagina-produto {
+    > .conteiner-principal {
+      margin-top: 0!important;
+    }
+  }
   .breadcrumbs {
     padding: 13px 10px;
     ul {
@@ -522,8 +573,15 @@ form.avise-me-form {
         background-size: contain;
       }
     }
+    .comprar {
+      .botao-comprar {
+        width: 88%!important;;
+      }
+    }
   }
-
+  .cep #formCalcularCep .form-inline div:has(input[name=cep]) {
+    gap: 3px!important;
+  }
   .aproveite-tambem {
     h4.titulo {
       font-size: 20px;

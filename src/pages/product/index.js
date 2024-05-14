@@ -36,9 +36,20 @@ const productPage = {
       element.prepend(buttonPayments);
     })
   },
+  createButtonCEP: function () {
+    const buttonCEP = document.createElement('div');
+    buttonCEP.classList.add('button-cep');
+    buttonCEP.textContent = 'Modo de envio';
+    buttonCEP.addEventListener('click', e => {
+      e.target.nextElementSibling.classList.toggle('show-options')
+    })
+    document.querySelectorAll('#formCalcularCep').forEach(element => {
+      element.before(buttonCEP);
+    })
+  },
   init: function () {
     this.createButtonPayments();
-    console.log('teste6');
+    this.createButtonCEP();
     this.moveElements();
     window.matchMedia("(max-width: 768px)").matches ? productPageMobile.init() : null;
   }

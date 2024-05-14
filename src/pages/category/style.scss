@@ -347,7 +347,7 @@ div[class^="ordenar-listagem rodape"] {
 
 @media(max-width:768px) {
   .conteiner-principal {
-    padding-top: 240px;
+    padding-top: 0!important;
   }
   .conteudo {
     .ordenar-listagem {
