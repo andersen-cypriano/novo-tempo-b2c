@@ -99,10 +99,10 @@ $font-2: "Cinzel", serif;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-start;
 
   .btn-share {
-    position: absolute;
+    
     font-family: $font-1;
     font-size: 14px;
     display: flex;
@@ -120,17 +120,18 @@ $font-2: "Cinzel", serif;
     }
   }
   .lista-redes {
-    position: absolute;
+    
     top: 24px;
+    margin-bottom: 10px!important;
   }
 
   span.disp-entrega {
-    position: absolute;
+    
     bottom: -70px;
     font-size: 12px;
     color: #402d5d;
     font-weight: 500;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     b {
@@ -211,6 +212,7 @@ $font-2: "Cinzel", serif;
   }
 }
 .acoes-produto {
+  padding-bottom: 0!important;
   > div:has(.preco-produto) {
     .preco-produto {
       float: none !important;
@@ -512,6 +514,16 @@ form.avise-me-form {
       }
     }
   }
+}
+
+.favorite-button-product {
+  width: 100%;
+  height: 30px;
+  display: block;
+  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/fav-stroke.svg")
+    center right no-repeat;
+  background-size: contain;
+  z-index: 50;
 }
 
 @media (max-width: 768px) {

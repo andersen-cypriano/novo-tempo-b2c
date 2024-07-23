@@ -38,6 +38,13 @@ $font-2: "Cinzel", serif;
             }
             .info-produto {
               padding: 0;
+              .produto-sku  {
+                display: block;
+                &:before {
+                  content: 'SKU:';
+
+                }
+              }
               a.nome-produto {
                 font-size: 16px;
                 color: #000;
